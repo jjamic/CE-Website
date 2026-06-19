@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
+  <!-- 3D L-bracket / prototype part -->
+  <!-- Front face -->
+  <path d="M20 58 L20 22 L36 22 L36 36 L56 36 L56 58 Z" stroke="#1F1F1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Top face (3D effect) -->
+  <path d="M20 22 L28 14 L44 14 L44 28 L36 36" stroke="#1F1F1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Right face -->
+  <path d="M56 36 L64 28 L44 28" stroke="#1F1F1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M56 58 L64 50 L64 28" stroke="#1F1F1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Holes -->
+  <circle cx="28" cy="50" r="4" stroke="#1F1F1F" stroke-width="1.8"/>
+  <circle cx="46" cy="50" r="4" stroke="#1F1F1F" stroke-width="1.8"/>
+  <circle cx="28" cy="28" r="3" stroke="#1F1F1F" stroke-width="1.8"/>
+</svg>

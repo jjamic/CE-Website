@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fractional Engineering — Carchrie Engineering · Sydney</title>
+<meta name="description" content="Fractional mechanical engineering for hardware teams — senior engineering support without the overhead of a full-time hire. Sydney-based, global clients.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.carchrie-engineering.com/engineering-partner.html">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fractional Engineering — Carchrie Engineering · Sydney">
+<meta property="og:description" content="Ongoing senior mechanical engineering support for hardware teams. Monthly retainer for design validation, troubleshooting, and development guidance.">
+<meta property="og:url" content="https://www.carchrie-engineering.com/engineering-partner.html">
+<meta property="og:image" content="https://www.carchrie-engineering.com/images/og-share-card.jpg">
+<meta property="og:site_name" content="Carchrie Engineering">
+<meta property="og:locale" content="en_AU">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fractional Engineering — Carchrie Engineering · Sydney">
+<meta name="twitter:description" content="Ongoing senior mechanical engineering support for hardware teams. Monthly retainer for design validation, troubleshooting, and development guidance.">
+<meta name="twitter:image" content="https://www.carchrie-engineering.com/images/og-share-card.jpg">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.ep-hero{background:var(--ink);padding:80px 40px;position:relative;overflow:hidden;}
+.ep-pat{position:absolute;inset:0;opacity:.045;background-image:url('images/pattern.svg');background-size:1200px 912px;background-repeat:repeat;pointer-events:none;}
+.ep-grad{position:absolute;inset:0;background:radial-gradient(ellipse at 75% 50%,rgba(85,142,182,.1) 0%,transparent 60%);pointer-events:none;}
+.ep-inner{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center;position:relative;z-index:1;}
+.ep-tag{font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);display:block;margin-bottom:14px;}
+.ep-title{font-family:var(--display);font-weight:800;font-size:clamp(36px,5.2vw,60px);line-height:.93;letter-spacing:-.03em;color:var(--white);margin-bottom:18px;}
+.ep-title em{font-style:italic;font-weight:300;color:rgba(255,255,255,.38);}
+.ep-sub{font-size:15px;font-weight:300;color:rgba(255,255,255,.52);line-height:1.75;margin-bottom:28px;}
+.why-box{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-lg);padding:26px;}
+.why-title{font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:14px;}
+.why-item{display:flex;gap:10px;align-items:flex-start;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.07);}
+.why-item:last-child{border-bottom:none;}
+.why-dot{width:5px;height:5px;border-radius:50%;background:var(--blue);flex-shrink:0;margin-top:6px;}
+.why-strong{font-size:13px;font-weight:500;color:var(--white);display:block;margin-bottom:2px;}
+.why-desc{font-size:13px;font-weight:300;color:rgba(255,255,255,.4);line-height:1.5;}
+
+.for-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--ink-12);border:1px solid var(--ink-12);border-radius:var(--r-lg);overflow:hidden;margin-top:32px;}
+.for-item{background:var(--white);padding:20px;}
+.for-label{font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:6px;}
+.for-title{font-size:14px;font-weight:500;color:var(--ink);margin-bottom:4px;}
+.for-desc{font-size:13px;font-weight:300;color:var(--ink-60);line-height:1.6;}
+
+.options-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:40px;}
+.option-card{border-radius:var(--r-lg);padding:28px;display:flex;flex-direction:column;gap:14px;}
+.opt-light{background:var(--white);border:1.5px solid var(--ink-12);}
+.opt-blue{background:var(--blue);border:1.5px solid var(--blue);}
+.option-label{font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;}
+.opt-light .option-label{color:var(--ink-30);}
+.opt-blue .option-label{color:rgba(255,255,255,.38);}
+.option-name{font-family:var(--display);font-weight:800;font-size:22px;line-height:1.05;}
+.opt-light .option-name{color:var(--ink);}
+.opt-blue .option-name{color:var(--white);}
+.option-desc{font-size:13px;font-weight:300;line-height:1.7;}
+.opt-light .option-desc{color:var(--ink-60);}
+.opt-blue .option-desc{color:rgba(255,255,255,.62);}
+.option-div{border:none;border-top:1px solid;}
+.opt-light .option-div{border-color:var(--ink-12);}
+.opt-blue .option-div{border-color:rgba(255,255,255,.18);}
+.option-list{list-style:none;display:flex;flex-direction:column;gap:9px;flex:1;}
+.option-list li{font-size:12px;font-weight:300;line-height:1.5;padding-left:14px;position:relative;}
+.option-list li::before{content:'';position:absolute;left:0;top:7px;width:4px;height:4px;border-radius:50%;}
+.opt-light .option-list li{color:var(--ink-60);}
+.opt-light .option-list li::before{background:var(--ink-30);}
+.opt-blue .option-list li{color:rgba(255,255,255,.75);}
+.opt-blue .option-list li::before{background:rgba(255,255,255,.42);}
+.option-cta{margin-top:4px;}
+
+.scope-box{background:var(--blue-faint);border:1.5px solid var(--blue-dim);border-radius:var(--r-lg);padding:20px 24px;margin-top:14px;}
+.scope-title{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:7px;}
+.scope-text{font-size:13px;font-weight:300;color:var(--ink-60);line-height:1.75;}
+.scope-text strong{font-weight:500;color:var(--ink);}
+
+.select-note{background:var(--ink);border-radius:var(--r-lg);padding:26px 30px;display:flex;gap:18px;align-items:flex-start;}
+.select-icon{width:38px;height:38px;background:rgba(85,142,182,.15);border-radius:var(--r);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.select-title{font-size:14px;font-weight:500;color:var(--white);margin-bottom:5px;}
+.select-desc{font-size:13px;font-weight:300;color:rgba(255,255,255,.42);line-height:1.7;}
+
+.how-step{display:grid;grid-template-columns:40px 1fr;gap:0 16px;padding:20px 0;border-bottom:1px solid var(--ink-12);}
+.how-step:last-child{border-bottom:none;}
+.how-col{display:flex;flex-direction:column;align-items:center;}
+.how-n{width:28px;height:28px;border-radius:50%;background:var(--blue-faint);border:1.5px solid var(--blue);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:var(--blue);}
+.how-line{width:1.5px;flex:1;min-height:12px;background:var(--blue-dim);margin-top:6px;}
+.how-title{font-size:14px;font-weight:500;color:var(--ink);margin-bottom:4px;}
+.how-desc{font-size:13px;font-weight:300;color:var(--ink-60);line-height:1.7;}
+
+@media(max-width:768px){
+  .ep-hero{padding:52px 20px;}
+  .ep-inner{grid-template-columns:1fr;gap:32px;}
+  .for-grid{grid-template-columns:1fr;}
+  .options-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+<div id="nav-ph"></div>
+
+<section class="ep-hero">
+  <div class="ep-pat"></div>
+  <div class="ep-grad"></div>
+  <div class="ep-inner">
+    <div>
+      <span class="ep-tag">Fractional engineering</span>
+      <h1 class="ep-title">Fractional engineering —<br><em>senior support without<br>the full-time overhead</em></h1>
+      <p class="ep-sub">Direct access to an experienced product engineer for the questions and decisions that matter — structured to how you work. Two straightforward options — lightweight async support, or a more structured arrangement with dedicated session time.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <a href="contact.html" class="btn btn-blue">Discuss availability</a>
+        <a href="#options" class="btn btn-ghost">View options ↓</a>
+      </div>
+    </div>
+    <div class="why-box reveal">
+      <div class="why-title">Where this adds value</div>
+      <div class="why-item"><div class="why-dot"></div><div><span class="why-strong">Hardware startups in active development</span><span class="why-desc">Expert engineering input on key decisions — without the overhead of a full-time hire.</span></div></div>
+      <div class="why-item"><div class="why-dot"></div><div><span class="why-strong">Industrial design firms</span><span class="why-desc">Mechanical engineering input on client projects without adding headcount.</span></div></div>
+      <div class="why-item"><div class="why-dot"></div><div><span class="why-strong">Product businesses iterating</span><span class="why-desc">Ongoing questions, troubleshooting, and next-generation guidance.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap pad">
+    <p class="t-tag reveal" style="margin-bottom:12px;">Where we add value</p>
+    <h2 class="t-display t-h2 reveal" style="margin-bottom:8px;">Engineering on demand —<br><em style="font-style:italic;font-weight:300;color:var(--blue);">without the overhead</em></h2>
+    <p class="t-sub reveal">Sometimes you need a quick answer from someone who actually knows. Not every question needs a formal project — sometimes it just needs the right person on the end of a message.</p>
+    <div class="for-grid">
+      <div class="for-item reveal"><div class="for-label">Startups</div><div class="for-title">Hardware teams in active development</div><div class="for-desc">Engineering capability that scales with your needs — expert input on key decisions without a full-time hire.</div></div>
+      <div class="for-item reveal"><div class="for-label">Design studios</div><div class="for-title">Industrial design firms</div><div class="for-desc">Mechanical engineering input on client projects without adding headcount to your studio.</div></div>
+      <div class="for-item reveal"><div class="for-label">SMEs</div><div class="for-title">Product businesses with ongoing development</div><div class="for-desc">Senior engineering support for businesses iterating on existing hardware or developing new lines.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="options">
+  <div class="wrap pad">
+    <p class="t-tag reveal" style="margin-bottom:12px;">Two options</p>
+    <h2 class="t-display t-h2 reveal" style="margin-bottom:8px;">Lightweight or structured —<br>depending on what you need</h2>
+    <p class="t-sub reveal" style="margin-bottom:0;">Both options provide ongoing access to senior mechanical engineering. The difference is whether structured session time is included.</p>
+    <div class="options-grid">
+      <div class="option-card opt-light reveal">
+        <div class="option-label">Option 01</div>
+        <div class="option-name">Async support</div>
+        <div class="option-desc">Priority access for engineering questions as they arise — answered fast, grounded in structural and manufacturing reality. No meetings required.</div>
+        <div style="font-size:13px;font-weight:300;color:var(--ink-60);margin-top:8px;line-height:1.6;">Monthly fee based on scope and cadence — contact us to discuss availability.</div>
+        <hr class="option-div">
+        <ul class="option-list">
+          <li>Engineering questions answered on an ongoing basis</li>
+          <li>Sense-checks, material selection, process guidance</li>
+          <li>DFM and feasibility opinions</li>
+          <li>Preferential rates on any scoped project work</li>
+        </ul>
+        <div class="option-cta"><a href="contact.html" class="btn btn-outline" style="width:100%;justify-content:center;">Discuss availability →</a></div>
+      </div>
+      <div class="option-card opt-blue reveal">
+        <div class="option-label">Option 02</div>
+        <div class="option-name">Async + session time</div>
+        <div class="option-desc">All async support, plus a defined block of meeting time each week or fortnight — for design decisions, risk review, and roadmap input.</div>
+        <div style="font-size:13px;font-weight:300;color:rgba(255,255,255,.65);margin-top:8px;line-height:1.6;">Monthly fee based on scope and cadence — contact us to discuss availability.</div>
+        <hr class="option-div">
+        <ul class="option-list">
+          <li>All async support included</li>
+          <li>Defined weekly or fortnightly session time</li>
+          <li>Structured agenda — design, risk, decisions</li>
+          <li>Greater depth on complex or evolving challenges</li>
+          <li>Preferential rates on project work</li>
+        </ul>
+        <div class="option-cta"><a href="contact.html" class="btn btn-white" style="width:100%;justify-content:center;">Discuss availability →</a></div>
+      </div>
+    </div>
+    <div class="scope-box reveal">
+      <div class="scope-title">Scope boundary</div>
+      <div class="scope-text">Both options cover engineering <strong>questions and guidance</strong> — not detailed project work. Anything requiring detailed analysis, reports, or significant time is flagged upfront and quoted separately. <strong>No surprises, no scope creep.</strong> Best suited to teams building physical products where failure, manufacturability, and reliability matter.</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap pad">
+    <p class="t-tag reveal" style="margin-bottom:12px;">Fit</p>
+    <h2 class="t-display t-h3 reveal" style="margin-bottom:36px;">Where we work best</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;" class="reveal">
+      <div style="background:var(--white);border:1px solid var(--ink-12);border-radius:var(--r-lg);padding:26px;">
+        <div style="font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:14px;">Best suited for</div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:9px;">
+          <li style="font-size:13px;font-weight:300;color:var(--ink-60);line-height:1.5;padding-left:14px;position:relative;"><span style="position:absolute;left:0;top:7px;width:4px;height:4px;border-radius:50%;background:var(--blue);display:block;"></span>Structurally demanding or complex hardware</li>
+          <li style="font-size:13px;font-weight:300;color:var(--ink-60);line-height:1.5;padding-left:14px;position:relative;"><span style="position:absolute;left:0;top:7px;width:4px;height:4px;border-radius:50%;background:var(--blue);display:block;"></span>Products approaching prototype or tooling commitment</li>
+          <li style="font-size:13px;font-weight:300;color:var(--ink-60);line-height:1.5;padding-left:14px;position:relative;"><span style="position:absolute;left:0;top:7px;width:4px;height:4px;border-radius:50%;background:var(--blue);display:block;"></span>Teams needing senior engineering judgment without a full-time hire</li>
+          <li style="font-size:13px;font-weight:300;color:var(--ink-60);line-height:1.5;padding-left:14px;position:relative;"><span style="position:absolute;left:0;top:7px;width:4px;height:4px;border-radius:50%;background:var(--blue);display:block;"></span>Hardware where failure, manufacturability, and reliability matter</li>
+          <li style="font-size:13px;font-weight:300;color:var(--ink-60);line-height:1.5;padding-left:14px;position:relative;"><span style="position:absolute;left:0;top:7px;width:4px;height:4px;border-radius:50%;background:var(--blue);display:block;"></span>Industrial design firms needing ongoing mechanical input</li>
+        </ul>
+      </div>
+      <div style="background:var(--off-white);border:1px solid var(--ink-12);border-radius:var(--r-lg);padding:26px;">
+        <div style="font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-30);margin-bottom:14px;">Not the right fit for</div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:9px;">
+          <li style="font-size:13px;font-weight:300;color:var(--ink-60);line-height:1.5;padding-left:14px;position:relative;"><span style="position:absolute;left:0;top:7px;width:4px;height:4px;border-radius:50%;background:var(--ink-30);display:block;"></span>High-volume drafting or CAD production work</li>
+          <li style="font-size:13px;font-weight:300;color:var(--ink-60);line-height:1.5;padding-left:14px;position:relative;"><span style="position:absolute;left:0;top:7px;width:4px;height:4px;border-radius:50%;background:var(--ink-30);display:block;"></span>Styling-led industrial design or visualisation</li>
+          <li style="font-size:13px;font-weight:300;color:var(--ink-60);line-height:1.5;padding-left:14px;position:relative;"><span style="position:absolute;left:0;top:7px;width:4px;height:4px;border-radius:50%;background:var(--ink-30);display:block;"></span>Consumer electronics PCB or firmware work</li>
+          <li style="font-size:13px;font-weight:300;color:var(--ink-60);line-height:1.5;padding-left:14px;position:relative;"><span style="position:absolute;left:0;top:7px;width:4px;height:4px;border-radius:50%;background:var(--ink-30);display:block;"></span>Low-cost CAD outsourcing</li>
+          <li style="font-size:13px;font-weight:300;color:var(--ink-60);line-height:1.5;padding-left:14px;position:relative;"><span style="position:absolute;left:0;top:7px;width:4px;height:4px;border-radius:50%;background:var(--ink-30);display:block;"></span>Projects where engineering judgment isn't valued</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap pad">
+    <div class="select-note reveal">
+      <div class="select-icon">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="6.5" stroke="#558EB6" stroke-width="1.4"/><path d="M9 5.5V9L11.5 11.5" stroke="#558EB6" stroke-width="1.4" stroke-linecap="round"/></svg>
+      </div>
+      <div>
+        <div class="select-title">We work with a small number of partners at any one time</div>
+        <div class="select-desc">This keeps engagement quality high and responses meaningful. Get in touch to discuss current availability — we'll be straightforward about whether there's capacity and whether it's a good fit.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap pad">
+    <p class="t-tag reveal" style="margin-bottom:12px;">Getting started</p>
+    <h2 class="t-display t-h3 reveal" style="margin-bottom:32px;">How it works</h2>
+    <div>
+      <div class="how-step reveal"><div class="how-col"><div class="how-n">1</div><div class="how-line"></div></div><div><div class="how-title">Get in touch</div><div class="how-desc">Brief description of your product and situation. We'll discuss whether there's a fit and which option makes sense.</div></div></div>
+      <div class="how-step reveal"><div class="how-col"><div class="how-n">2</div><div class="how-line"></div></div><div><div class="how-title">Context call — 30 minutes</div><div class="how-desc">A focused call to understand your product, team, and development stage — so answers are specific and useful from day one.</div></div></div>
+      <div class="how-step reveal"><div class="how-col"><div class="how-n">3</div><div class="how-line"></div></div><div><div class="how-title">Structure and cadence agreed</div><div class="how-desc">Engagement format, session frequency (if applicable), and terms agreed before anything begins.</div></div></div>
+      <div class="how-step reveal"><div class="how-col"><div class="how-n">4</div></div><div><div class="how-title">Larger work converts cleanly</div><div class="how-desc">When a question grows into a proper piece of work — FEA, a design review, or a DFM report — it's flagged, scoped, and quoted separately. Partner rates apply automatically.</div></div></div>
+    </div>
+  </div>
+</section>
+<div class="cta-band">
+  <h2 class="t-display t-h2 reveal" style="color:var(--white);margin-bottom:14px;">Senior engineering<br><em style="font-style:italic;font-weight:300;color:rgba(255,255,255,.42);">in your corner</em></h2>
+  <p class="reveal">Get in touch to discuss availability and whether it's a good fit.</p>
+  <div class="cta-band-btns reveal">
+    <a href="contact.html" class="btn btn-white">Discuss availability</a>
+    <a href="design-review.html" class="btn btn-ghost">Need a one-off review?</a>
+  </div>
+</div>
+
+<div id="footer-ph"></div>
+<script src="js/main.js"></script>
+</body>
+</html>

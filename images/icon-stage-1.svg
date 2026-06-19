@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
+  <!-- Head silhouette -->
+  <circle cx="28" cy="30" r="9" stroke="#1F1F1F" stroke-width="2" stroke-linecap="round"/>
+  <path d="M19 50c0-5 4-8 9-8s9 3 9 8" stroke="#1F1F1F" stroke-width="2" stroke-linecap="round"/>
+  <!-- Thought bubble -->
+  <circle cx="42" cy="28" r="2" stroke="#1F1F1F" stroke-width="1.5"/>
+  <circle cx="48" cy="22" r="3" stroke="#1F1F1F" stroke-width="1.5"/>
+  <path d="M44 17 Q52 10 62 16 Q70 12 70 22 Q74 28 68 33 Q64 38 56 36 Q48 40 44 34 Q38 32 40 24 Q40 18 44 17Z" stroke="#1F1F1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Bracket/part inside bubble -->
+  <path d="M50 22 L50 30 L62 30" stroke="#1F1F1F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M50 22 L54 22" stroke="#1F1F1F" stroke-width="1.8" stroke-linecap="round"/>
+</svg>

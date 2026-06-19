@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
+  <!-- Open box -->
+  <!-- Box front face -->
+  <path d="M12 42 L12 70 L68 70 L68 42" stroke="#1F1F1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Box bottom -->
+  <path d="M12 70 L24 78 L76 78 L76 50 L68 42" stroke="#1F1F1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Box right side -->
+  <path d="M68 70 L76 78" stroke="#1F1F1F" stroke-width="2" stroke-linecap="round"/>
+  <!-- Left flap open -->
+  <path d="M12 42 L24 34 L24 50 L12 58" stroke="#1F1F1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Right flap open -->
+  <path d="M68 42 L76 34 L76 50" stroke="#1F1F1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Front flap open (top) -->
+  <path d="M12 42 L40 30 L68 42" stroke="#1F1F1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Parts inside box -->
+  <path d="M26 58 L26 48 L36 48 L36 55" stroke="#1F1F1F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M40 62 L40 50 L52 50 L52 62 L40 62" stroke="#1F1F1F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="30" cy="61" r="2.5" stroke="#1F1F1F" stroke-width="1.5"/>
+  <circle cx="48" cy="56" r="2" stroke="#1F1F1F" stroke-width="1.5"/>
+</svg>

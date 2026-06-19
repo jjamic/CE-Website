@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carchrie Engineering — Hardware Product Development · Sydney</title>
+<meta name="description" content="Mechanical engineering consultancy specialising in hardware product development and design de-risking. 16+ years experience. Sydney, Australia.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.carchrie-engineering.com/">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Carchrie Engineering — Hardware Product Development · Sydney">
+<meta property="og:description" content="Mechanical engineering consultancy specialising in hardware product development and design de-risking. 16+ years experience. Sydney, Australia.">
+<meta property="og:url" content="https://www.carchrie-engineering.com/">
+<meta property="og:image" content="https://www.carchrie-engineering.com/images/og-share-card.jpg">
+<meta property="og:site_name" content="Carchrie Engineering">
+<meta property="og:locale" content="en_AU">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Carchrie Engineering — Hardware Product Development · Sydney">
+<meta name="twitter:description" content="Mechanical engineering consultancy specialising in hardware product development and design de-risking. 16+ years experience. Sydney, Australia.">
+<meta name="twitter:image" content="https://www.carchrie-engineering.com/images/og-share-card.jpg">
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* HERO */
+.hero{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden;background:var(--ink);}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:.45;}
+.hero-overlay{position:absolute;inset:0;z-index:1;background:rgba(31,31,31,.62);}
+.hero-pat{position:absolute;inset:0;z-index:0;opacity:.055;background-image:url('images/pattern.svg');background-size:1200px 912px;background-repeat:repeat;}
+.hero-grad{position:absolute;inset:0;z-index:2;background:radial-gradient(ellipse at 72% 48%,rgba(85,142,182,.13) 0%,transparent 62%);}
+.hero-inner{position:relative;z-index:3;width:100%;max-width:var(--max-w);margin:0 auto;padding:80px 40px;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
+.hero-tag{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:18px;display:flex;align-items:center;gap:10px;}
+.hero-tag::before{content:'';display:block;width:24px;height:1.5px;background:var(--blue);}
+.hero h1{font-family:var(--display);font-weight:800;font-size:clamp(40px,6vw,72px);line-height:.94;letter-spacing:-.03em;color:var(--white);margin-bottom:22px;}
+.hero h1 em{font-style:italic;color:var(--blue);font-weight:300;}
+.hero-sub{font-size:17px;font-weight:300;color:rgba(255,255,255,.62);line-height:1.7;max-width:440px;margin-bottom:32px;}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;}
+.hero-props{display:flex;flex-direction:column;gap:1px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-lg);overflow:hidden;}
+.hero-prop{padding:20px 24px;background:rgba(255,255,255,.03);border-bottom:1px solid rgba(255,255,255,.06);transition:background .18s;}
+.hero-prop:last-child{border-bottom:none;}
+.hero-prop:hover{background:rgba(255,255,255,.07);}
+.hero-prop-label{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--white);margin-bottom:8px;}
+.hero-prop-label::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0;}
+.hero-prop-title{font-size:15px;font-weight:500;color:rgba(255,255,255,.85);margin-bottom:4px;line-height:1.2;}
+.hero-prop-desc{font-size:13px;font-weight:300;color:rgba(255,255,255,.45);line-height:1.55;}
+
+/* THREE SERVICES */
+.three-svcs{display:grid;grid-template-columns:1fr 1fr 1fr;border:1px solid var(--ink-12);border-radius:var(--r-lg);overflow:hidden;}
+.svc{padding:36px 30px;text-decoration:none;display:flex;flex-direction:column;gap:12px;transition:background .18s;border-right:1px solid var(--ink-12);}
+.svc:last-child{border-right:none;}
+.svc-1{background:var(--blue);}
+.svc-1:hover{background:var(--blue-dark);}
+.svc-2{background:var(--white);}
+.svc-2:hover{background:var(--blue-faint);}
+.svc-3{background:var(--ink);}
+.svc-3:hover{background:#2a2a2a;}
+.svc-num{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;}
+.svc-1 .svc-num{color:rgba(255,255,255,.38);}
+.svc-2 .svc-num{color:var(--blue);}
+.svc-3 .svc-num{color:rgba(255,255,255,.3);}
+.svc-title{font-family:var(--display);font-weight:800;font-size:clamp(17px,1.9vw,22px);line-height:1.05;}
+.svc-1 .svc-title{color:var(--white);}
+.svc-2 .svc-title{color:var(--ink);}
+.svc-3 .svc-title{color:var(--white);}
+.svc-desc{font-size:13px;font-weight:300;line-height:1.75;flex:1;}
+.svc-1 .svc-desc{color:rgba(255,255,255,.68);}
+.svc-2 .svc-desc{color:var(--ink-60);}
+.svc-3 .svc-desc{color:rgba(255,255,255,.5);}
+.svc-link{font-size:13px;font-weight:500;}
+.svc-1 .svc-link{color:rgba(255,255,255,.82);}
+.svc-2 .svc-link{color:var(--blue);}
+.svc-3 .svc-link{color:rgba(255,255,255,.48);}
+
+/* TRIGGER GRID */
+.trigger-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--ink-12);border:1px solid var(--ink-12);border-radius:var(--r-lg);overflow:hidden;}
+.trig-item{background:var(--white);padding:22px 24px;display:flex;gap:18px;align-items:flex-start;}
+.trig-icon{width:72px;height:72px;flex-shrink:0;background:var(--blue-faint);border-radius:var(--r);display:flex;align-items:center;justify-content:center;}
+.trig-icon img{width:58px;height:58px;display:block;opacity:.9;}
+.trig-icon .icon-ph{width:30px;height:30px;border-radius:4px;background:var(--blue-dim);opacity:.35;}
+.trig-text{}
+.trig-title{font-size:14px;font-weight:500;color:var(--ink);margin-bottom:5px;line-height:1.3;}
+.trig-desc{font-size:13px;font-weight:300;color:var(--ink-60);line-height:1.6;}
+
+/* MOAT */
+.moat-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--ink-12);border:1px solid var(--ink-12);border-radius:var(--r-lg);overflow:hidden;}
+.moat-item{background:var(--white);padding:24px;}
+.moat-item.hi{background:var(--blue-faint);}
+.moat-num{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:8px;opacity:.75;}
+.moat-item.hi .moat-num{opacity:1;}
+.moat-title{font-size:14px;font-weight:500;color:var(--ink);margin-bottom:5px;}
+.moat-desc{font-size:13px;font-weight:300;color:var(--ink-60);line-height:1.65;}
+
+/* WHO WE WORK WITH */
+.who-grid{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px;}
+.who-pill{font-size:13px;font-weight:400;color:var(--ink-60);border:1px solid var(--ink-12);border-radius:20px;padding:7px 18px;background:var(--white);}
+
+/* WORK */
+.work-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.work-card{background:var(--white);border:1px solid var(--ink-12);border-radius:var(--r-lg);overflow:hidden;text-decoration:none;display:block;transition:border-color .18s,transform .18s;}
+.work-card:hover{border-color:var(--blue);transform:translateY(-2px);}
+.work-body{padding:18px 20px;}
+.work-type{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:5px;}
+.work-title{font-family:var(--display);font-weight:800;font-size:17px;color:var(--ink);margin-bottom:5px;line-height:1.2;}
+.work-desc{font-size:14px;font-weight:300;color:var(--ink-60);line-height:1.65;}
+.work-tags{padding:0 20px 16px;display:flex;gap:5px;flex-wrap:wrap;}
+
+/* LOGOS / CLIENTS */
+.logos-strip{background:var(--white);border-top:1px solid var(--ink-12);padding:40px;}
+.logos-inner{max-width:var(--max-w);margin:0 auto;}
+.logos-label{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-30);text-align:center;margin-bottom:28px;}
+.logos-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px 16px;align-items:center;justify-items:center;}
+.logo-slot{height:44px;width:100%;display:flex;align-items:center;justify-content:center;}
+.logo-slot img{max-height:32px;max-width:120px;width:auto;height:auto;opacity:.6;filter:grayscale(100%);transition:opacity .25s,filter .25s;}
+.logo-slot:hover img{opacity:.9;filter:grayscale(0%);}
+
+
+@media(max-width:768px){
+  .hero-inner{grid-template-columns:1fr;gap:36px;padding:52px 20px;}
+  .three-svcs{grid-template-columns:1fr;}
+  .svc{border-right:none;border-bottom:1px solid rgba(255,255,255,.07);}
+  .trigger-grid{grid-template-columns:1fr;}
+  .moat-grid{grid-template-columns:1fr;}
+  .work-grid-2{grid-template-columns:1fr;}
+  .logos-strip{padding:28px 20px;}
+  .logos-grid{grid-template-columns:repeat(3,1fr);}
+}
+
+
+
+
+/* TESTIMONIALS 4-GRID */
+.testi-4grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.testi-4grid .testi{background:var(--white);border:1px solid var(--ink-12);border-radius:var(--r-lg);padding:26px 26px 20px;display:flex;flex-direction:column;}
+.testi-tags-row{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 10px;}
+.testi-tag{font-size:11px;font-weight:500;color:var(--blue);background:var(--blue-faint);border:1px solid var(--blue-dim);border-radius:20px;padding:3px 11px;}
+@media(max-width:640px){.testi-4grid{grid-template-columns:1fr;}}
+
+/* CORE SERVICES */
+.core-svc-card{display:block;background:var(--white);border:1px solid var(--ink-12);border-radius:var(--r-lg);overflow:hidden;text-decoration:none;transition:border-color .18s,transform .18s;}
+.core-svc-card:hover{border-color:var(--blue);transform:translateY(-2px);}
+.core-svc-img{aspect-ratio:3/2;overflow:hidden;}
+.core-svc-img img{width:100%;height:100%;object-fit:cover;}
+.core-svc-body{padding:16px;}
+.core-n{font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:6px;}
+.core-title{font-size:14px;font-weight:500;color:var(--ink);margin-bottom:5px;line-height:1.3;}
+.core-desc{font-size:13px;font-weight:300;color:var(--ink-60);line-height:1.6;}
+
+.review-badge{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;font-size:12px;font-weight:700;flex-shrink:0;}
+.review-badge.google{background:#4285F4;border:none;color:#fff;font-size:11px;font-weight:800;}
+@media(max-width:768px){.testi-4grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:480px){.testi-4grid{grid-template-columns:1fr;}}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Carchrie Engineering",
+  "description": "Mechanical engineering consultancy specialising in hardware product development, design review, and structural analysis.",
+  "url": "https://www.carchrie-engineering.com",
+  "logo": "https://www.carchrie-engineering.com/images/logo-dark.svg",
+  "image": "https://www.carchrie-engineering.com/images/og-share-card.jpg",
+  "founder": {
+    "@type": "Person",
+    "name": "James Carchrie",
+    "jobTitle": "Senior Mechanical Engineer",
+    "alumniOf": "University of Glasgow",
+    "knowsAbout": ["Mechanical Engineering", "FEA", "Product Development", "DFM", "Structural Analysis", "Light Electric Vehicles"]
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Sydney",
+    "addressRegion": "NSW",
+    "addressCountry": "AU"
+  },
+  "areaServed": ["AU", "US", "GB", "NZ"],
+  "serviceType": ["Hardware Product Development", "Design Review", "Structural Analysis", "FEA", "DFM Review", "Fractional Engineering"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Engineering Services",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Viability & Concept Review", "description": "Pre-CAD design review from $750 AUD"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Design Review", "description": "Structural and DFM review before prototyping, from $2,500 AUD"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Pre-production Audit", "description": "Full pre-production validation, from $5,000 AUD"}}
+    ]
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/carchrie-engineering/"
+  ]
+}
+</script>
+</head>
+<body>
+<div id="nav-ph"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <video class="hero-video" autoplay muted loop playsinline poster="">
+    <source src="images/hero-video.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="hero-grad"></div>
+  <div class="hero-inner">
+    <div>
+      <p class="hero-tag reveal">Mechanical engineering consultancy · Sydney</p>
+      <h1 class="reveal">Designs that work<br>not just in CAD —<br><em>in production<br>and in the field</em></h1>
+      <p class="hero-sub reveal">Mechanical engineering for products where failure is expensive — structural validation, DFM, and engineering judgement before you commit to prototypes, tooling, or production.</p>
+      <div class="hero-ctas reveal">
+        <a href="design-review.html" class="btn btn-blue">Design review →</a>
+        <a href="contact.html" class="btn btn-ghost">Book a free call</a>
+      </div>
+      <div class="reveal" style="display:flex;gap:10px;flex-wrap:wrap;margin-top:28px;padding-top:24px;border-top:1px solid rgba(255,255,255,.14);">
+        <div style="font-size:13px;font-weight:500;color:rgba(255,255,255,.92);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);padding:6px 14px;border-radius:20px;">16+ years experience</div>
+        <div style="font-size:13px;font-weight:500;color:rgba(255,255,255,.92);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);padding:6px 14px;border-radius:20px;">Mobility · bicycle · structural hardware</div>
+        <div style="font-size:13px;font-weight:500;color:rgba(255,255,255,.92);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);padding:6px 14px;border-radius:20px;">Good Design Award winner</div>
+        <div style="font-size:13px;font-weight:500;color:rgba(255,255,255,.92);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);padding:6px 14px;border-radius:20px;">Concept to production delivery</div>
+        <div style="font-size:13px;font-weight:500;color:rgba(255,255,255,.92);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);padding:6px 14px;border-radius:20px;">Sydney · clients globally</div>
+      </div>
+    </div>
+    <div class="hero-props reveal">
+      <div class="hero-prop">
+        <div class="hero-prop-label">Design review</div>
+        <div class="hero-prop-title">Identify failure modes before they become costly</div>
+        <div class="hero-prop-desc">Structural validation and DFM review before prototype or tooling commitment — failure modes, simplification opportunities, and risk surfaced early.</div>
+      </div>
+      <div class="hero-prop">
+        <div class="hero-prop-label">Product development</div>
+        <div class="hero-prop-title">From concept to manufacturable hardware</div>
+        <div class="hero-prop-desc">Full lifecycle engineering — concept, CAD, structural analysis, prototyping, DFM, and supply chain. Enter at any stage.</div>
+      </div>
+      <div class="hero-prop">
+        <div class="hero-prop-label">Fractional engineering</div>
+        <div class="hero-prop-title">An experienced product engineer in your corner as your hardware evolves</div>
+        <div class="hero-prop-desc">Ongoing access to specialist mechanical engineering — structured to your development cadence.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<!-- JAMES INTRO -->
+<section class="section" style="background:var(--ink);padding:0;">
+  <div class="wrap" style="display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;padding:32px 40px;">
+    <img src="images/james-photo.jpg" alt="James Carchrie" style="width:72px;height:72px;border-radius:50%;object-fit:cover;object-position:top;border:2px solid rgba(255,255,255,.12);">
+    <div>
+      <div style="font-size:13px;font-weight:700;color:var(--white);margin-bottom:3px;">James Carchrie — MEng</div>
+      <div style="font-size:13px;font-weight:300;color:rgba(255,255,255,.55);line-height:1.6;">Mechanical engineer with 16+ years delivering production hardware across light electric vehicles, bicycle components, and structurally demanding consumer products. Founder of Carchrie Engineering.</div>
+    </div>
+  </div>
+</section>
+
+<!-- TRIGGER MOMENTS -->
+<section class="section">
+  <div class="wrap pad">
+    <p class="t-tag reveal" style="margin-bottom:12px;">Typical engagement points</p>
+    <h2 class="t-display t-h3 reveal" style="margin-bottom:8px;">Clients typically engage us when...</h2>
+    <p style="font-size:16px;font-weight:300;color:var(--ink-60);line-height:1.75;max-width:600px;margin-bottom:28px;" class="reveal">These are the moments where the cost of getting the engineering wrong is highest — and where our judgment adds the most value.</p>
+    <div class="trigger-grid reveal">
+      <div class="trig-item">
+        <div class="trig-icon"><img src="images/trig-icon-2.png" alt="" style="width:58px;height:58px;display:block;opacity:.9;"></div>
+        <div class="trig-text">
+          <div class="trig-title">Have an idea but don't know where to start</div>
+          <div class="trig-desc">We can map a path from first idea to manufacture — or start with a <a href="contact.html" style="color:var(--blue);text-decoration:none;font-weight:500;">free 15-min call</a> if you just want a frank first opinion.</div>
+        </div>
+      </div>
+      <div class="trig-item" style="border-left:1px solid var(--ink-12);">
+        <div class="trig-icon"><img src="images/trig-icon-1.png" alt="" style="width:58px;height:58px;display:block;opacity:.9;"></div>
+        <div class="trig-text">
+          <div class="trig-title">Industrial design is complete but engineering is unresolved</div>
+          <div class="trig-desc">Structural validation, DFM review, and manufacturing feasibility before development investment.</div>
+        </div>
+      </div>
+      <div class="trig-item" style="border-top:1px solid var(--ink-12);">
+        <div class="trig-icon"><img src="images/trig-icon-3.png" alt="" style="width:58px;height:58px;display:block;opacity:.9;"></div>
+        <div class="trig-text">
+          <div class="trig-title">Approaching tooling and need a final engineering review</div>
+          <div class="trig-desc">Pre-production audit before committing to tooling spend — when the cost of a redesign is highest.</div>
+        </div>
+      </div>
+      <div class="trig-item" style="border-top:1px solid var(--ink-12); border-left:1px solid var(--ink-12);">
+        <div class="trig-icon"><img src="images/trig-icon-4.png" alt="" style="width:58px;height:58px;display:block;opacity:.9;"></div>
+        <div class="trig-text">
+          <div class="trig-title">The product feels over-engineered or too expensive to manufacture</div>
+          <div class="trig-desc">Component consolidation, geometry simplification, and material review to reduce cost without compromising performance.</div>
+        </div>
+      </div>
+      <div class="trig-item" style="border-top:1px solid var(--ink-12);">
+        <div class="trig-icon"><img src="images/trig-icon-5.png" alt="" style="width:58px;height:58px;display:block;opacity:.9;"></div>
+        <div class="trig-text">
+          <div class="trig-title">A prototype failed and root cause is unclear</div>
+          <div class="trig-desc">Structural analysis and failure mode investigation to understand why and what to change before rebuilding.</div>
+        </div>
+      </div>
+      <div class="trig-item" style="border-top:1px solid var(--ink-12); border-left:1px solid var(--ink-12);">
+        <div class="trig-icon"><img src="images/trig-icon-6.png" alt="" style="width:58px;height:58px;display:block;opacity:.9;"></div>
+        <div class="trig-text">
+          <div class="trig-title">Need structural validation before production or compliance testing</div>
+          <div class="trig-desc">FEA and load case development to validate performance against applicable standards before committing to volume.</div>
+        </div>
+      </div>
+    </div
+  </div>
+</section>
+
+<!-- IDEA & FEASIBILITY REVIEW -->
+<section class="section" style="background:var(--blue);padding:0;">
+  <div class="wrap" style="padding:32px 40px;">
+    <div style="display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center;" class="reveal">
+      <div>
+        <p style="font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:8px;">Not sure where to start?</p>
+        <h2 style="font-family:var(--display);font-weight:800;font-size:clamp(18px,2.2vw,24px);color:var(--white);line-height:1.15;margin-bottom:8px;">Idea &amp; Feasibility Review</h2>
+        <p style="font-size:14px;font-weight:300;color:rgba(255,255,255,.72);line-height:1.7;margin-bottom:12px;max-width:560px;">A fixed-fee engineering consultation for founders and product businesses exploring new hardware. 60-minute session with written summary — fixed fee, contact us for details.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:16px;">
+          <div style="font-size:13px;font-weight:300;color:rgba(255,255,255,.65);display:flex;align-items:center;gap:6px;"><span style="width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.5);display:inline-block;flex-shrink:0;"></span>What's technically feasible</div>
+          <div style="font-size:13px;font-weight:300;color:rgba(255,255,255,.65);display:flex;align-items:center;gap:6px;"><span style="width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.5);display:inline-block;flex-shrink:0;"></span>Likely manufacturing approach</div>
+          <div style="font-size:13px;font-weight:300;color:rgba(255,255,255,.65);display:flex;align-items:center;gap:6px;"><span style="width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.5);display:inline-block;flex-shrink:0;"></span>Major risks and unknowns</div>
+          <div style="font-size:13px;font-weight:300;color:rgba(255,255,255,.65);display:flex;align-items:center;gap:6px;"><span style="width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.5);display:inline-block;flex-shrink:0;"></span>Indicative development path and costs</div>
+        </div>
+      </div>
+      <div style="flex-shrink:0;">
+        <a href="design-review.html" class="btn" style="background:var(--white);color:var(--blue);font-weight:700;white-space:nowrap;">View pricing →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CORE SERVICES -->
+<section class="section">
+  <div class="wrap pad-sm">
+    <p class="t-tag reveal" style="margin-bottom:12px;">Individual services</p>
+    <h2 class="t-display t-h3 reveal" style="margin-bottom:8px;">Know exactly what you need?</h2>
+    <p style="font-size:16px;font-weight:300;color:var(--ink-60);line-height:1.75;max-width:600px;margin-bottom:24px;" class="reveal">If you already know the service you need, we quote and deliver it as a standalone piece of work.</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;" class="reveal">
+      <a href="contact.html" class="core-svc-card">
+        <div class="core-svc-img"><img src="images/svc-concept.jpg" alt="Concept design"></div>
+        <div class="core-svc-body">
+          <div class="core-title">Concept design &amp; CAD</div>
+          <div class="core-desc">Brief or sketch to 3D concept — geometry, materials, and manufacture considered from the start.</div>
+        </div>
+      </a>
+      <a href="contact.html" class="core-svc-card">
+        <div class="core-svc-img"><img src="images/svc-cad.jpg" alt="Detailed 3D CAD"></div>
+        <div class="core-svc-body">
+          <div class="core-title">Detailed 3D CAD</div>
+          <div class="core-desc">Production-ready 3D models in SolidWorks or Fusion 360.</div>
+        </div>
+      </a>
+      <a href="contact.html" class="core-svc-card">
+        <div class="core-svc-img"><img src="images/svc-drawings.jpg" alt="2D manufacture drawings"></div>
+        <div class="core-svc-body">
+          <div class="core-title">2D manufacture drawings</div>
+          <div class="core-desc">Fully dimensioned drawings ready for a supplier or fabricator.</div>
+        </div>
+      </a>
+      <a href="contact.html" class="core-svc-card">
+        <div class="core-svc-img"><img src="images/svc-fea.jpg" alt="Structural analysis FEA"></div>
+        <div class="core-svc-body">
+          <div class="core-title">Structural analysis (FEA)</div>
+          <div class="core-desc">Load case development, FEA, safety factor and failure mode assessment.</div>
+        </div>
+      </a>
+      <a href="contact.html" class="core-svc-card">
+        <div class="core-svc-img"><img src="images/svc-prototype.jpg" alt="Prototyping and manufacture sourcing"></div>
+        <div class="core-svc-body">
+          <div class="core-title">Prototyping &amp; manufacture sourcing</div>
+          <div class="core-desc">Prototype coordination and supplier sourcing for low-volume or production runs.</div>
+        </div>
+      </a>
+      <a href="contact.html" class="core-svc-card">
+        <div class="core-svc-img"><img src="images/svc-testing.jpg" alt="Product testing support" style="object-position:bottom;"></div>
+        <div class="core-svc-body">
+          <div class="core-title">Product testing support</div>
+          <div class="core-desc">Test plan development, standards review, and physical testing support.</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CLIENTS WORK WITH US — MOAT -->
+<section class="section">
+  <div class="wrap pad-sm">
+    <p class="t-tag reveal" style="margin-bottom:12px;">Why we catch problems others miss</p>
+    <h2 class="t-display t-h3 reveal" style="margin-bottom:8px;">Most engineers see one stage.<br>We've worked across all of them.</h2>
+    <p style="font-size:16px;font-weight:300;color:var(--ink-60);line-height:1.75;max-width:600px;margin-bottom:24px;" class="reveal">That perspective changes what gets caught before production.</p>
+    <div class="moat-grid reveal">
+      <div class="moat-item hi"><div class="moat-num">Mechanic</div><div class="moat-title">How products fail in the field</div><div class="moat-desc">Hands-on experience with what breaks, what wears, and what the design missed — before engineering decisions are made, not after.</div></div>
+      <div class="moat-item hi"><div class="moat-num">Designer</div><div class="moat-title">How products are engineered</div><div class="moat-desc">16+ years of structural analysis, design decisions, and the discipline to validate rather than assume.</div></div>
+      <div class="moat-item"><div class="moat-num">Manufacturer</div><div class="moat-title">How products are actually made</div><div class="moat-desc">What a supplier can realistically produce, at what cost, and what needs to change before tooling is committed.</div></div>
+      <div class="moat-item"><div class="moat-num">Customer</div><div class="moat-title">How products are really used</div><div class="moat-desc">How hardware is actually loaded, abused, and experienced — not how it performs in simulation.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAILURE ANALYSIS / EXPERT WITNESS -->
+<section class="section">
+  <div class="wrap pad-sm">
+    <div style="background:var(--ink);border-radius:var(--r-lg);padding:36px 40px;display:grid;grid-template-columns:1.3fr 1fr;gap:32px;align-items:center;" class="reveal">
+      <div>
+        <p style="font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:10px;">Failure analysis &amp; independent review</p>
+        <h2 style="font-family:var(--display);font-weight:800;font-size:clamp(20px,2.6vw,26px);color:var(--white);line-height:1.2;margin-bottom:10px;">When something has already gone wrong</h2>
+        <p style="font-size:14px;font-weight:300;color:rgba(255,255,255,.65);line-height:1.75;margin:0;">Independent root cause investigation for field failures, warranty disputes, or insurance and legal matters — structural analysis, root cause findings, and a written engineering opinion — independent, with no stake in the original design.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <a href="contact.html" class="btn btn-blue" style="text-align:center;">Discuss a failure investigation →</a>
+        <p style="font-size:12px;font-weight:300;color:rgba(255,255,255,.45);text-align:center;margin:0;">Confidential. Independent technical opinion supported by engineering analysis and written documentation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUR BRANDS — placeholder for future product lines -->
+<!-- 
+  PLACEHOLDER SECTION: populate once product brands are live.
+  Suggested content: brand name, one-line description, small product image, link to brand site.
+  Delete this comment and the section below remains ready to use.
+-->
+<section class="section" style="display:none;" id="our-brands">
+  <div class="wrap pad-sm">
+    <p class="t-tag reveal" style="margin-bottom:12px;">Our brands</p>
+    <h2 class="t-display t-h3 reveal" style="margin-bottom:8px;">Hardware we design, manufacture, and sell ourselves</h2>
+    <p style="font-size:16px;font-weight:300;color:var(--ink-60);line-height:1.75;max-width:600px;margin-bottom:24px;" class="reveal">Alongside client work, we develop and manufacture our own product lines — applying the same engineering rigour to hardware we stand behind ourselves.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;" class="reveal">
+      <a href="#" class="core-svc-card">
+        <div class="core-svc-img"><img src="images/svc-concept.jpg" alt="Brand placeholder"></div>
+        <div class="core-svc-body">
+          <div class="core-title">Brand name</div>
+          <div class="core-desc">One-line description of the product line.</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- SELECTED WORK — 2 hardware projects -->
+<section class="section">
+  <div class="wrap pad">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:32px;">
+      <div>
+        <p class="t-tag reveal" style="margin-bottom:8px;">Hardware delivered</p>
+        <h2 class="t-display t-h2 reveal">Some of the hardware<br>we've developed</h2>
+      </div>
+      <a href="projects.html" class="btn btn-outline reveal" style="flex-shrink:0;">All projects →</a>
+    </div>
+    <p style="font-size:14px;font-weight:300;color:var(--ink-60);margin-bottom:28px;" class="reveal">A selection of projects we can share — much of our work is covered by NDA.</p>
+    <div class="work-grid-2">
+      <div class="work-card reveal">
+        <div style="aspect-ratio:4/3;overflow:hidden;">
+          <div class="carousel-wrap" style="aspect-ratio:4/3;border-radius:0;">
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="images/project-zoomo-1.jpg" alt="Zoomo One delivery vehicle" style="width:100%;height:100%;object-fit:cover;"></div>
+              <div class="carousel-slide"><img src="images/project-zoomo-2.jpg" alt="Zoomo structural analysis" style="width:100%;height:100%;object-fit:cover;"></div>
+              <div class="carousel-slide"><img src="images/project-zoomo-3.jpg" alt="Zoomo detail" style="width:100%;height:100%;object-fit:cover;"></div>
+            </div>
+            <button class="carousel-btn carousel-btn-prev">‹</button><button class="carousel-btn carousel-btn-next">›</button>
+            <div class="carousel-dots" style="position:absolute;bottom:8px;left:0;right:0;"></div>
+          </div>
+        </div>
+        <div class="work-body">
+          <div class="work-type">Light EV · Full development</div>
+          <div class="work-title">Zoomo One Electric Delivery Vehicle</div>
+          <div class="work-desc">Award-winning B2B electric delivery vehicle developed from concept through production. Frame optimised through iterative FEA prior to physical build.</div>
+        </div>
+        <div class="work-tags"><span class="deliv">Vehicle design</span><span class="deliv">Structural analysis</span><span class="deliv">Manufacture</span><span class="deliv">Good Design Award</span></div>
+      </div>
+      <div class="work-card reveal">
+        <div style="aspect-ratio:4/3;overflow:hidden;">
+          <div class="carousel-wrap" style="aspect-ratio:4/3;border-radius:0;">
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="images/project-bike-holder-2.jpg" alt="Bike holder installed" onerror="this.parentElement.innerHTML=ph('Bike holder installed on caravan')"></div>
+              <div class="carousel-slide"><img src="images/project-bike-holder-1.jpg" alt="Bike holder detail" onerror="this.parentElement.innerHTML=ph('Bike holder wheel cradle detail')"></div>
+            </div>
+            <button class="carousel-btn carousel-btn-prev">‹</button><button class="carousel-btn carousel-btn-next">›</button>
+            <div class="carousel-dots" style="position:absolute;bottom:8px;left:0;right:0;"></div>
+          </div>
+        </div>
+        <div class="work-body">
+          <div class="work-type">Consumer hardware · Concept to prototype</div>
+          <div class="work-title">Drawbar Bicycle Rack</div>
+          <div class="work-desc">Adjustable bicycle storage rack for caravan drawbars — designed to accommodate multiple wheel sizes. Full concept ideation, detailed design, and manufacture pack delivered. Prototyped and field-tested.</div>
+        </div>
+        <div class="work-tags"><span class="deliv">Concept design</span><span class="deliv">CAD</span><span class="deliv">Manufacture pack</span><span class="deliv">Prototype</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section">
+  <div class="wrap pad-sm">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:28px;flex-wrap:wrap;gap:12px;">
+      <div>
+        <p class="t-tag reveal" style="margin-bottom:8px;">Client feedback</p>
+        <h2 class="t-display t-h3 reveal">What clients say</h2>
+      </div>
+      <a href="https://www.google.com/search?q=carchrie+engineering" target="_blank" rel="noopener" class="btn btn-outline reveal" style="font-size:13px;flex-shrink:0;">Read Google reviews →</a>
+    </div>
+    <div class="testi-4grid">
+      <div class="testi reveal">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">
+          <div class="stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
+          
+        </div>
+        <p class="testi-q">"I want to keep him all to myself. He's been an exceptional partner — understands the domain and communicates it in a way I can follow, which has been instrumental in moving the design forward. Reluctantly, I highly recommend."</p>
+        <div class="testi-who">Franc G, FG Designs</div>
+        <div class="testi-when">Dining Table FEA</div>
+      </div>
+      <div class="testi reveal">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">
+          <div class="stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
+          <span style="display:flex;align-items:center;gap:5px;"><span class="review-badge google">G</span><span style="font-size:10px;font-weight:600;color:#4285F4;">Google review</span></span>
+        </div>
+        <p class="testi-q">"Carchrie Engineering was recommended to me by a business colleague. I had a clear idea of what I needed but James added a lot of value with his collaborative ideas. He was open to meeting my tight deadline, plus he found me someone to build the product. Six stars."</p>
+        <div class="testi-who">Matthew D, Hydric Desalination</div>
+        <div class="testi-when">Custom Mould Design</div>
+      </div>
+      <div class="testi reveal">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">
+          <div class="stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
+          <span style="display:flex;align-items:center;gap:5px;"><span class="review-badge google">G</span><span style="font-size:10px;font-weight:600;color:#4285F4;">Google review</span></span>
+        </div>
+        <p class="testi-q">"Excellent work in creating the designs for our project. Very helpful in providing all the drawings required to produce the wooden panels."</p>
+        <div class="testi-who">Andrew G, IceTronics</div>
+        <div class="testi-when">Custom Enclosure Design</div>
+      </div>
+      <div class="testi reveal">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">
+          <div class="stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
+          
+        </div>
+        <p class="testi-q">"As usual, delivered on time to the high quality needed. Working with James is always easy and stress free. Responds in a timely manner, is professional, helpful, and his services will continue to be used as and when needed."</p>
+        <div class="testi-who">Peter B, Private Client</div>
+        <div class="testi-when">Cam Handle Design</div>
+      </div>
+      <div class="testi reveal">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">
+          <div class="stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
+          
+        </div>
+        <p class="testi-q">"Fantastic work — prompt, very easy to work with and produced exceptional results. I would and will absolutely recommend his expertise to anyone who needs it."</p>
+        <div class="testi-who">Anthony R, Touring Essentials</div>
+        <div class="testi-when">Caravan Product Development</div>
+      </div>
+      <div class="testi reveal">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">
+          <div class="stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
+          
+        </div>
+        <p class="testi-q">"Very happy with the feedback which helped us make a decision on imported parts. Able to operate under a somewhat vague set of parameters and get the job done. Would hire again."</p>
+        <div class="testi-who">Ben U, Align Manufacturing</div>
+        <div class="testi-when">Weld Strength Analysis</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENT LOGOS -->
+<div class="logos-strip">
+  <div class="logos-inner">
+    <p class="logos-label">Companies &amp; clients we've worked with</p>
+    <div class="logos-grid">
+      <div class="logo-slot logo-img"><img src="images/client-logo-1.png" alt=""></div>
+      <div class="logo-slot logo-img"><img src="images/client-logo-2.png" alt=""></div>
+      <div class="logo-slot logo-img"><img src="images/client-logo-3.png" alt=""></div>
+      <div class="logo-slot logo-img"><img src="images/client-logo-4.png" alt=""></div>
+      <div class="logo-slot logo-img"><img src="images/client-logo-5.png" alt=""></div>
+      <div class="logo-slot logo-img"><img src="images/client-logo-6.png" alt=""></div>
+      <div class="logo-slot logo-img"><img src="images/client-logo-7.png" alt=""></div>
+      <div class="logo-slot logo-img"><img src="images/client-logo-8.png" alt=""></div>
+      <div class="logo-slot logo-img"><img src="images/client-logo-9.png" alt=""></div>
+      <div class="logo-slot logo-img"><img src="images/client-logo-10.png" alt=""></div>
+    </div>
+    <p style="text-align:center;font-size:12px;font-weight:300;color:var(--ink-30);margin-top:16px;">Many clients prefer to remain anonymous — further references available on request.</p>
+  </div>
+</div>
+
+<div class="cta-band">
+  <h2 class="t-display t-h2 reveal" style="color:var(--white);margin-bottom:14px;">Engineering decisions validated<br><em style="font-style:italic;font-weight:300;color:rgba(255,255,255,.48);">for production and real-world use</em></h2>
+  <p class="reveal" style="font-size:17px;">Design review is where we add the most value. Contact us to discuss your project.</p>
+  <div class="cta-band-btns reveal">
+    <a href="contact.html" class="btn btn-white">Contact us</a>
+    <a href="design-review.html" class="btn btn-ghost">View review packages</a>
+  </div>
+</div>
+
+<div id="footer-ph"></div>
+<script src="js/main.js"></script>
+</body>
+</html>

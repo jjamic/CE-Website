@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Design Review & De-risking — Carchrie Engineering · Sydney</title>
+<meta name="description" content="Fixed-fee design review and structural validation for hardware products. FEA, DFM, and failure mode analysis before prototype or tooling commitment. Sydney.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.carchrie-engineering.com/design-review.html">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Design Review & De-risking — Carchrie Engineering · Sydney">
+<meta property="og:description" content="Fixed-fee design review and structural validation for hardware products. FEA, DFM, and failure mode analysis before prototype or tooling commitment. Sydney.">
+<meta property="og:url" content="https://www.carchrie-engineering.com/design-review.html">
+<meta property="og:image" content="https://www.carchrie-engineering.com/images/og-share-card.jpg">
+<meta property="og:site_name" content="Carchrie Engineering">
+<meta property="og:locale" content="en_AU">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Design Review & De-risking — Carchrie Engineering · Sydney">
+<meta name="twitter:description" content="Fixed-fee design review and structural validation for hardware products. FEA, DFM, and failure mode analysis before prototype or tooling commitment. Sydney.">
+<meta name="twitter:image" content="https://www.carchrie-engineering.com/images/og-share-card.jpg">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.dr-hero{background:var(--ink);padding:80px 40px;position:relative;overflow:hidden;}
+.dr-pat{position:absolute;inset:0;opacity:.045;background-image:url('images/pattern.svg');background-size:1200px 912px;background-repeat:repeat;pointer-events:none;}
+.dr-grad{position:absolute;inset:0;background:radial-gradient(ellipse at 28% 55%,rgba(85,142,182,.11) 0%,transparent 58%);pointer-events:none;}
+.dr-inner{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center;position:relative;z-index:1;}
+.dr-tag{font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);display:block;margin-bottom:14px;}
+.dr-title{font-family:var(--display);font-weight:800;font-size:clamp(34px,5.2vw,58px);line-height:.93;letter-spacing:-.03em;color:var(--white);margin-bottom:18px;}
+.dr-title em{font-style:italic;font-weight:300;color:rgba(255,255,255,.38);}
+.dr-sub{font-size:17px;font-weight:300;color:rgba(255,255,255,.55);line-height:1.75;margin-bottom:28px;}
+.cost-box{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-lg);padding:26px;}
+.cost-title{font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:14px;}
+.cost-row{display:flex;justify-content:space-between;align-items:center;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.07);gap:12px;}
+.cost-row:last-child{border-bottom:none;}
+.cost-label{font-size:12px;font-weight:300;color:rgba(255,255,255,.55);}
+.cost-val{font-family:var(--display);font-weight:800;font-size:13px;color:var(--white);white-space:nowrap;}
+.cost-val.bad{color:#fca5a5;}
+.cost-val.good{color:#86efac;}
+
+/* CORE OFFERING — the holistic review differentiator */
+.core-section{background:var(--white);padding:80px 40px;border-top:1px solid var(--ink-12);}
+.core-inner{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;}
+.core-tag{font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);display:block;margin-bottom:12px;}
+.core-title{font-family:var(--display);font-weight:800;font-size:clamp(24px,3.5vw,38px);line-height:.96;letter-spacing:-.03em;color:var(--ink);margin-bottom:16px;}
+.core-title em{font-style:italic;font-weight:300;color:var(--blue);}
+.core-body{font-size:15px;font-weight:300;color:var(--ink-60);line-height:1.8;margin-bottom:24px;}
+.core-body strong{font-weight:500;color:var(--ink);}
+.core-points{display:flex;flex-direction:column;gap:14px;}
+.core-point{display:flex;gap:14px;align-items:flex-start;padding:16px;background:var(--off-white);border-radius:var(--r-lg);border:1px solid var(--ink-12);}
+.core-point-icon{width:32px;height:32px;background:var(--blue-faint);border-radius:var(--r);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.core-point-title{font-size:13px;font-weight:500;color:var(--ink);margin-bottom:3px;}
+.core-point-desc{font-size:12px;font-weight:300;color:var(--ink-60);line-height:1.6;}
+
+/* FEA SECTION */
+.fea-section{background:var(--ink);padding:72px 40px;border-top:1px solid rgba(255,255,255,.06);}
+.fea-inner{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+.fea-copy-tag{font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);display:block;margin-bottom:12px;}
+.fea-copy-title{font-family:var(--display);font-weight:800;font-size:clamp(24px,3.5vw,40px);line-height:.96;letter-spacing:-.03em;color:var(--white);margin-bottom:16px;}
+.fea-copy-title em{font-style:italic;font-weight:300;color:rgba(255,255,255,.38);}
+.fea-note{font-size:12px;font-weight:300;color:rgba(255,255,255,.38);line-height:1.6;margin-bottom:20px;padding:12px 16px;background:rgba(255,255,255,.05);border-radius:var(--r);border-left:2px solid var(--blue);}
+.fea-points{display:flex;flex-direction:column;gap:10px;}
+.fea-point{display:flex;gap:10px;align-items:flex-start;}
+.fea-dot{width:5px;height:5px;border-radius:50%;background:var(--blue);flex-shrink:0;margin-top:7px;}
+.fea-text{font-size:13px;font-weight:300;color:rgba(255,255,255,.6);line-height:1.55;}
+.fea-text strong{font-weight:500;color:var(--white);}
+.fea-image{border-radius:var(--r-lg);overflow:hidden;aspect-ratio:4/3;}
+.fea-image img{width:100%;height:100%;object-fit:cover;display:block;}
+
+/* TIERS */
+.tiers-bg{background:var(--off-white);}
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.tier{background:var(--white);border:1.5px solid var(--ink-12);border-radius:var(--r-lg);padding:26px 22px;display:flex;flex-direction:column;transition:transform .18s;}
+.tier:hover{transform:translateY(-2px);}
+.tier.hi{border-color:var(--blue);}
+.tier-eye{font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-30);margin-bottom:10px;}
+.tier.hi .tier-eye{color:var(--blue);}
+.tier-name{font-family:var(--display);font-weight:800;font-size:20px;color:var(--ink);margin-bottom:5px;line-height:1.15;}
+.tier-stage{font-size:13px;font-weight:300;color:var(--ink-60);margin-bottom:14px;line-height:1.5;}
+.tier-price{font-family:var(--display);font-weight:800;font-size:24px;color:var(--ink);margin-bottom:4px;}
+.tier-price span{font-size:11px;font-weight:300;color:var(--ink-60);}
+.tier-price-note{font-size:11px;font-weight:300;color:var(--ink-60);margin-bottom:14px;}
+.tier-div{border:none;border-top:1px solid var(--ink-12);margin-bottom:14px;}
+.tier-list{list-style:none;display:flex;flex-direction:column;gap:8px;flex:1;margin-bottom:14px;}
+.tier-list li{font-size:13px;font-weight:300;color:var(--ink-60);line-height:1.5;padding-left:13px;position:relative;}
+.tier-list li::before{content:'';position:absolute;left:0;top:7px;width:4px;height:4px;border-radius:50%;background:var(--ink-30);}
+.tier.hi .tier-list li::before{background:var(--blue);}
+.tier-time{font-size:12px;font-weight:500;color:var(--ink-60);padding-top:10px;border-top:1px solid var(--ink-12);}
+.tiers-note{margin-top:14px;font-size:13px;font-weight:300;color:var(--ink-60);line-height:1.7;padding:14px 18px;background:var(--white);border:1px solid var(--ink-12);border-radius:var(--r);}
+
+/* WHAT WE LOOK FOR */
+.risk-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--ink-12);border:1px solid var(--ink-12);border-radius:var(--r-lg);overflow:hidden;margin-top:36px;}
+.risk-item{background:var(--white);padding:22px;}
+.risk-label{font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:6px;}
+.risk-title{font-size:14px;font-weight:500;color:var(--ink);margin-bottom:5px;}
+.risk-desc{font-size:13px;font-weight:300;color:var(--ink-60);line-height:1.6;}
+
+/* CASE STUDY */
+.case-box{background:var(--white);border:1px solid var(--ink-12);border-radius:var(--r-lg);overflow:hidden;margin-top:32px;}
+.case-head{padding:22px 26px 18px;border-bottom:1px solid var(--ink-12);display:grid;grid-template-columns:1fr 200px;gap:24px;align-items:start;}
+.case-tag-s{font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:5px;}
+.case-title-s{font-family:var(--display);font-weight:800;font-size:19px;color:var(--ink);line-height:1.2;}
+.case-client-s{font-size:12px;font-weight:300;color:var(--ink-60);margin-top:3px;}
+.case-head-img{border-radius:var(--r);overflow:hidden;}
+.case-head-img img{width:100%;height:100%;object-fit:cover;display:block;}
+.case-body-s{padding:20px 26px;font-size:14px;font-weight:300;color:var(--ink-60);line-height:1.75;}
+.case-steps-s{padding:14px 26px;background:var(--off-white);border-top:1px solid var(--ink-12);}
+.case-step-s{display:flex;gap:10px;padding:9px 0;border-bottom:1px solid var(--ink-12);}
+.case-step-s:last-child{border-bottom:none;}
+.case-step-n{width:20px;height:20px;border-radius:50%;border:1.5px solid var(--blue);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:800;color:var(--blue);flex-shrink:0;margin-top:1px;}
+.case-step-t{font-size:13px;font-weight:300;color:var(--ink-60);line-height:1.6;}
+.case-outcome-s{padding:14px 26px;background:var(--blue-faint);border-top:1px solid var(--blue-dim);display:flex;gap:10px;}
+.case-outcome-label{font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);white-space:nowrap;padding-top:2px;}
+.case-outcome-text{font-size:13px;font-weight:300;color:var(--blue-dark);line-height:1.6;}
+
+.partner-teaser{background:var(--ink);border-radius:var(--r-lg);padding:32px;display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center;}
+.partner-teaser-title{font-family:var(--display);font-weight:800;font-size:19px;color:var(--white);margin-bottom:5px;line-height:1.1;}
+.partner-teaser-desc{font-size:13px;font-weight:300;color:rgba(255,255,255,.42);line-height:1.65;}
+
+@media(max-width:768px){
+  .dr-hero{padding:52px 20px;}
+  .dr-inner{grid-template-columns:1fr;gap:32px;}
+  .core-section{padding:52px 20px;}
+  .core-inner{grid-template-columns:1fr;}
+  .fea-section{padding:52px 20px;}
+  .fea-inner{grid-template-columns:1fr;}
+  .tiers{grid-template-columns:1fr;}
+  .risk-grid{grid-template-columns:1fr;}
+  .case-head{grid-template-columns:1fr;}
+  .case-head-img{display:none;}
+  .partner-teaser{grid-template-columns:1fr;}
+}
+
+/* RISK TABLE */
+.risk-table{border:1px solid var(--ink-12);border-radius:var(--r-lg);overflow:hidden;}
+.risk-table-row{display:grid;grid-template-columns:120px 1fr 1.6fr;gap:0;border-bottom:1px solid var(--ink-12);}
+.risk-table-row:last-child{border-bottom:none;}
+.risk-table-head{background:var(--off-white);}
+.risk-table-head .risk-col-label,.risk-table-head .risk-col-title,.risk-table-head .risk-col-desc{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-30);padding:12px 18px;}
+.risk-col-label,.risk-col-title,.risk-col-desc{padding:18px;border-right:1px solid var(--ink-12);font-size:14px;line-height:1.65;}
+.risk-col-desc{border-right:none;font-weight:300;color:var(--ink-60);}
+.risk-col-label{display:flex;align-items:center;background:var(--off-white);}
+.risk-col-title{font-weight:500;color:var(--ink);}
+.risk-badge{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--blue);}
+@media(max-width:640px){.risk-table-row{grid-template-columns:1fr;}.risk-table-head{display:none;}.risk-col-label,.risk-col-title,.risk-col-desc{border-right:none;border-bottom:1px solid var(--ink-06);padding:12px 16px;}.risk-col-desc{border-bottom:none;}}
+</style>
+</head>
+<body>
+<div id="nav-ph"></div>
+
+<section class="dr-hero">
+  <div class="dr-pat"></div>
+  <div class="dr-grad"></div>
+  <div class="dr-inner">
+    <div>
+      <span class="dr-tag">Design review &amp; de-risking</span>
+      <h1 class="dr-title">Know where your<br>design could fail —<br><em>before it does</em></h1>
+      <p class="dr-sub">Structural and DFM review of your hardware before prototype or tooling spend. We surface failure modes, manufacturing risks, and engineering improvements while they're still cheap to fix.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <a href="contact.html" class="btn btn-blue">Request a review</a>
+        <a href="#tiers" class="btn btn-ghost">View packages ↓</a>
+      </div>
+    </div>
+    <div class="cost-box reveal">
+      <div class="cost-title">Cost of finding problems late</div>
+      <div class="cost-row"><span class="cost-label">Concept stage</span><span class="cost-val good">Very low</span></div>
+      <div class="cost-row"><span class="cost-label">Detailed design</span><span class="cost-val good">Low</span></div>
+      <div class="cost-row"><span class="cost-label">Prototype</span><span class="cost-val">Moderate</span></div>
+      <div class="cost-row"><span class="cost-label">Tooling</span><span class="cost-val bad">High</span></div>
+      <div class="cost-row"><span class="cost-label">In the field</span><span class="cost-val bad">Extremely high</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CORE OFFERING — holistic review differentiator -->
+
+
+<!-- FEA SECTION -->
+<section class="fea-section">
+  <div class="fea-inner">
+    <div>
+      <span class="fea-copy-tag">Structural analysis</span>
+      <h2 class="fea-copy-title">FEA where it<br><em>actually matters</em></h2>
+      <div class="fea-note">FEA is included where structurally relevant — not every project requires it. For simpler designs or concept-stage reviews, engineering judgment and manual calculations may be more appropriate and faster.</div>
+      <div class="fea-points">
+        <div class="fea-point"><div class="fea-dot"></div><div class="fea-text"><strong>Stress concentrations</strong> — see where load accumulates and why</div></div>
+        <div class="fea-point"><div class="fea-dot"></div><div class="fea-text"><strong>Safety factors</strong> — quantified against your load case and applicable standards</div></div>
+        <div class="fea-point"><div class="fea-dot"></div><div class="fea-text"><strong>Deflection and fatigue</strong> — static and cyclic performance validated</div></div>
+        <div class="fea-point"><div class="fea-dot"></div><div class="fea-text"><strong>Design optimisation</strong> — geometry changes tested virtually before any physical build</div></div>
+      </div>
+    </div>
+    <div class="fea-image reveal">
+      <img src="images/fea-placeholder.png" alt="FEA stress analysis — von Mises stress contour plot">
+    </div>
+  </div>
+</section>
+
+<!-- TIERS -->
+<section class="section tiers-bg" id="tiers">
+  <div class="wrap pad">
+    <p class="t-tag reveal" style="margin-bottom:12px;">Review packages</p>
+    <h2 class="t-display t-h2 reveal" style="margin-bottom:8px;">Choose your stage</h2>
+    <p class="t-sub reveal" style="margin-bottom:40px;">Three packages mapped to your development stage. Indicative pricing shown — scope confirmed in an initial conversation.</p>
+    <div class="tiers reveal">
+      <div class="tier">
+        <div class="tier-eye">$ · Concept stage</div>
+        <div class="tier-name">Viability &amp; Concept Review</div>
+        <div class="tier-stage">Pre-CAD — before investing in detailed design</div>
+        <div class="tier-price">From $750 <span>AUD + GST</span></div>
+        <div class="tier-price-note">Structured session + written summary</div>
+        <hr class="tier-div">
+        <ul class="tier-list">
+          <li>Engineering and manufacturing lens assessment</li>
+          <li>Key risks, constraints, and unknowns surfaced</li>
+          <li>Viability verdict: proceed / conditional / rethink</li>
+          <li>Initial simplification and consolidation opportunities</li>
+          <li>3–5 prioritised next steps</li>
+          <li>Design Consultation Summary delivered within 24hrs</li>
+        </ul>
+        <div class="tier-time">Typical: session + summary within 24hrs</div>
+      </div>
+      <div class="tier hi" style="position:relative;">
+        <div style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--blue);color:var(--white);font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:3px 14px;border-radius:20px;white-space:nowrap;">Most common</div>
+        <div class="tier-eye">$$ · Most requested</div>
+        <div class="tier-name">Design Review</div>
+        <div class="tier-stage">Before prototyping or further development</div>
+        <div class="tier-price">Priced by scope <span>+ GST</span></div>
+        <div class="tier-price-note">Typical engagements from $2,500 AUD</div>
+        <hr class="tier-div">
+        <ul class="tier-list">
+          <li>Structural and DFM assessment</li>
+          <li>Component consolidation and simplification opportunities</li>
+          <li>FEA where structurally required</li>
+          <li>Tolerance, fit, and assembly review</li>
+          <li>Written report with prioritised risk register</li>
+        </ul>
+        <div class="tier-time">Typical timeline: 4–6 business days</div>
+      </div>
+      <div class="tier">
+        <div class="tier-eye">$$$ · Pre-production</div>
+        <div class="tier-name">Pre-production Audit</div>
+        <div class="tier-stage">Before committing to production tooling</div>
+        <div class="tier-price">Priced by scope <span>+ GST</span></div>
+        <div class="tier-price-note">Typical engagements from $5,000 AUD</div>
+        <hr class="tier-div">
+        <ul class="tier-list">
+          <li>Full DFMEA</li>
+          <li>Detailed FEA and structural validation</li>
+          <li>Manufacturing process and supply chain review</li>
+          <li>Design review against applicable standards and load cases</li>
+          <li>Comprehensive report, risk register, and follow-up</li>
+        </ul>
+        <div class="tier-time">Typical timeline: 7–12 business days</div>
+      </div>
+    </div>
+    <p class="tiers-note reveal">Pricing scales with design complexity and component count. Scope confirmed before work begins — no surprises.
+    <div style="margin-top:20px;padding:16px 20px;background:var(--off-white);border-radius:var(--r-lg);border:1px solid var(--ink-12);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;">
+      <p style="font-size:13px;font-weight:300;color:var(--ink-60);margin:0;line-height:1.65;">Not sure which package fits? Start with a <strong style="font-weight:600;color:var(--ink);">free 15-min call</strong> — or book the <strong style="font-weight:600;color:var(--ink);">Idea &amp; Feasibility Review ($750)</strong> for a 60-minute structured session with written summary.</p>
+      <a href="contact.html" class="btn btn-blue" style="flex-shrink:0;font-size:13px;white-space:nowrap;">Book a call →</a>
+    </div></p>
+  </div>
+</section>
+
+
+
+<!-- BEYOND BASIC -->
+<section class="section">
+  <div class="wrap pad-sm">
+    <p class="t-tag reveal" style="margin-bottom:12px;">Beyond a basic review</p>
+    <h2 class="t-display t-h3 reveal" style="margin-bottom:12px;">Not just manufacturability —<br>real engineering insight</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;" class="reveal">
+      <p style="font-size:16px;font-weight:300;color:var(--ink-60);line-height:1.8;margin:0;">A basic DFM check tells you whether your design can be made. Our review goes further — examining whether it <em>should</em> be made that way. That requires understanding the final application, the manufacturing process, and the business case.</p>
+      <p style="font-size:16px;font-weight:300;color:var(--ink-60);line-height:1.8;margin:0;">The most valuable findings are often not manufacturability failures — but opportunities to simplify assemblies, reduce part count, and remove unnecessary cost before production. That level of insight comes from real experience across design, manufacture, and field use.</p>
+    </div>
+  </div>
+</section>
+
+<!-- RISK GRID -->
+<section class="section">
+  <div class="wrap pad-sm">
+    <p class="t-tag reveal" style="margin-bottom:12px;">What we review</p>
+    <h2 class="t-display t-h3 reveal" style="margin-bottom:24px;">Four categories of risk</h2>
+    <div class="risk-table reveal">
+      <div class="risk-table-row risk-table-head">
+        <div class="risk-col-label">Category</div>
+        <div class="risk-col-title">What we look for</div>
+        <div class="risk-col-desc">How we assess it</div>
+      </div>
+      <div class="risk-table-row">
+        <div class="risk-col-label"><span class="risk-badge">Structural</span></div>
+        <div class="risk-col-title">Stress, fatigue, and failure modes</div>
+        <div class="risk-col-desc">Load case assessment, stress concentration identification, and FEA where structurally relevant. Safety factors confirmed against applicable standards.</div>
+      </div>
+      <div class="risk-table-row">
+        <div class="risk-col-label"><span class="risk-badge">DFM</span></div>
+        <div class="risk-col-title">Manufacturability grounded in real constraints</div>
+        <div class="risk-col-desc">Geometry, tolerances, and process selection reviewed against what a supplier can actually achieve — and at what cost.</div>
+      </div>
+      <div class="risk-table-row">
+        <div class="risk-col-label"><span class="risk-badge">Assembly</span></div>
+        <div class="risk-col-title">Fit, tolerance stack, and field service</div>
+        <div class="risk-col-desc">Tolerance stack analysis, assembly sequence review, and consideration of how the product will be maintained or repaired in the field.</div>
+      </div>
+      <div class="risk-table-row">
+        <div class="risk-col-label"><span class="risk-badge">Standards</span></div>
+        <div class="risk-col-title">Regulatory and material requirements</div>
+        <div class="risk-col-desc">Applicable standards identified, load cases developed accordingly. Failure analysis and reverse engineering support where relevant.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDY -->
+<section class="section">
+  <div class="wrap pad">
+    <p class="t-tag reveal" style="margin-bottom:12px;">Example project</p>
+    <h2 class="t-display t-h3 reveal" style="margin-bottom:28px;">De-risking in practice</h2>
+    <div class="case-box reveal">
+      <div class="case-head">
+        <div>
+          <div class="case-tag-s">Consumer furniture · Structural analysis</div>
+          <div class="case-title-s">Dining Table Frame — FEA to ISO 19682:2023</div>
+          <div class="case-client-s">Private client · Consumer industry</div>
+        </div>
+        <div class="case-head-img">
+          <div class="carousel-wrap" style="aspect-ratio:4/3;border-radius:var(--r-lg);margin-bottom:20px;">
+          <div class="carousel-track">
+            <div class="carousel-slide"><img src="images/project-table-2.jpg" alt="Table displacement FEA"></div>
+            <div class="carousel-slide"><img src="images/project-table-3.jpg" alt="Frame stress analysis"></div>
+            <div class="carousel-slide"><img src="images/project-table-4.jpg" alt="Bolt calculations"></div>
+            <div class="carousel-slide"><img src="images/project-table-1.jpg" alt="Load case summary"></div>
+          </div>
+          <button class="carousel-btn carousel-btn-prev">‹</button>
+          <button class="carousel-btn carousel-btn-next">›</button>
+          <div class="carousel-dots" style="position:absolute;bottom:8px;left:0;right:0;"></div>
+        </div>
+        </div>
+      </div>
+      <div class="case-body-s">Custom steel plate table frame reviewed before manufacture commitment. Loading conditions derived from ISO 19682:2023 — no dedicated dining table standard exists, so applicable loads were established through standards review first.</div>
+      <div class="case-steps-s">
+        <div class="case-step-s"><div class="case-step-n">1</div><div class="case-step-t">Standards review to establish applicable loading — horizontal static 400N, vertical static 2×1,000N, leg strength 5W+222N.</div></div>
+        <div class="case-step-s"><div class="case-step-n">2</div><div class="case-step-t">Bolt calculations across all load cases — connection design flagged as requiring change before manufacture.</div></div>
+        <div class="case-step-s"><div class="case-step-n">3</div><div class="case-step-t">FEA across all load cases — peak stresses and deflection assessed against allowable limits.</div></div>
+      </div>
+      <div class="case-outcome-s">
+        <span class="case-outcome-label">Outcome</span>
+        <span class="case-outcome-text">Frame cleared for manufacture. Connection redesign identified before production — avoiding an estimated $8k–$15k post-tooling revision and associated delays.</span>
+      </div>
+    </div>
+    <div style="margin-top:12px;text-align:center;">
+      <a href="projects.html" class="btn btn-outline">View all projects →</a>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNER TEASER -->
+<section class="section">
+  <div class="wrap pad">
+    <div class="partner-teaser reveal">
+      <div>
+        <div style="font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:7px;">Fractional engineer</div>
+        <div class="partner-teaser-title">Need ongoing engineering support?</div>
+        <div class="partner-teaser-desc">Design review is for discrete engagements. For ongoing access to senior engineering judgment — structured to your development cadence — see our Fractional Engineering offering.</div>
+      </div>
+      <div style="flex-shrink:0;"><a href="engineering-partner.html" class="btn btn-blue">Learn more →</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap pad">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;" class="reveal">
+      <div style="background:var(--white);border:1px solid var(--ink-12);border-radius:var(--r-lg);padding:24px;">
+        <div style="font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:12px;">Best suited for</div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;">
+          <li style="font-size:12px;font-weight:300;color:var(--ink-60);line-height:1.5;padding-left:13px;position:relative;"><span style="position:absolute;left:0;top:6px;width:4px;height:4px;border-radius:50%;background:var(--blue);display:block;"></span>Structurally demanding or complex hardware</li>
+          <li style="font-size:12px;font-weight:300;color:var(--ink-60);line-height:1.5;padding-left:13px;position:relative;"><span style="position:absolute;left:0;top:6px;width:4px;height:4px;border-radius:50%;background:var(--blue);display:block;"></span>Products approaching prototype or tooling commitment</li>
+          <li style="font-size:12px;font-weight:300;color:var(--ink-60);line-height:1.5;padding-left:13px;position:relative;"><span style="position:absolute;left:0;top:6px;width:4px;height:4px;border-radius:50%;background:var(--blue);display:block;"></span>Complex assemblies where part count, cost, or reliability matter</li>
+          <li style="font-size:12px;font-weight:300;color:var(--ink-60);line-height:1.5;padding-left:13px;position:relative;"><span style="position:absolute;left:0;top:6px;width:4px;height:4px;border-radius:50%;background:var(--blue);display:block;"></span>Load-bearing consumer, industrial, or mobility products</li>
+        </ul>
+      </div>
+      <div style="background:var(--off-white);border:1px solid var(--ink-12);border-radius:var(--r-lg);padding:24px;">
+        <div style="font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-30);margin-bottom:12px;">Not the right fit for</div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;">
+          <li style="font-size:12px;font-weight:300;color:var(--ink-60);line-height:1.5;padding-left:13px;position:relative;"><span style="position:absolute;left:0;top:6px;width:4px;height:4px;border-radius:50%;background:var(--ink-30);display:block;"></span>Styling or visualisation reviews</li>
+          <li style="font-size:12px;font-weight:300;color:var(--ink-60);line-height:1.5;padding-left:13px;position:relative;"><span style="position:absolute;left:0;top:6px;width:4px;height:4px;border-radius:50%;background:var(--ink-30);display:block;"></span>Consumer electronics or PCB design</li>
+          <li style="font-size:12px;font-weight:300;color:var(--ink-60);line-height:1.5;padding-left:13px;position:relative;"><span style="position:absolute;left:0;top:6px;width:4px;height:4px;border-radius:50%;background:var(--ink-30);display:block;"></span>Projects with no structural or manufacturability constraints</li>
+          <li style="font-size:12px;font-weight:300;color:var(--ink-60);line-height:1.5;padding-left:13px;position:relative;"><span style="position:absolute;left:0;top:6px;width:4px;height:4px;border-radius:50%;background:var(--ink-30);display:block;"></span>Pure rendering or documentation-only work</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <h2 class="t-display t-h2 reveal" style="color:var(--white);margin-bottom:14px;">Ready to de-risk<br>your hardware?</h2>
+  <p class="reveal">Contact us to discuss your design and development stage.</p>
+  <div class="cta-band-btns reveal">
+    <a href="contact.html" class="btn btn-white">Request a review</a>
+    <a href="product-development.html" class="btn btn-ghost">Need full development?</a>
+  </div>
+</div>
+
+<div id="footer-ph"></div>
+<script src="js/main.js"></script>
+</body>
+</html>

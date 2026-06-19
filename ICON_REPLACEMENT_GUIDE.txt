@@ -1,0 +1,63 @@
+ICON & IMAGE REPLACEMENT GUIDE
+Carchrie Engineering Website
+==============================
+
+Replace these files in the /images/ folder with your final versions.
+Keep the EXACT same filename — the site will update automatically.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TRIGGER ICONS  (Homepage: "Clients typically engage us when...")
+Format: PNG, transparent background, any size (displayed at 52×52px)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+trig-icon-1.png  → "Industrial design complete, engineering unresolved"  [UPLOADED ✓]
+trig-icon-2.png  → "Have an idea / don't know where to start"             [UPLOADED ✓]
+trig-icon-3.png  → "Approaching tooling, need final review"               [PLACEHOLDER — replace]
+trig-icon-4.png  → "Product feels over-engineered / too expensive"        [PLACEHOLDER — replace]
+trig-icon-5.png  → "A prototype failed, root cause unclear"               [UPLOADED ✓]
+trig-icon-6.png  → "Need structural validation before production"         [PLACEHOLDER — replace]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STAGE ICONS  (Product Development page: timeline)
+Format: PNG, transparent background (displayed at 64×64px in 114px circle)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+trig-icon-2.png  → Stage 1: Requirements & Concept  (reuses trigger icon)  [UPLOADED ✓]
+icon-stage-2.png → Stage 2: Design & Validation                             [UPLOADED ✓]
+icon-stage-3.svg → Stage 3: Prototype & Test                               [SVG placeholder — replace with PNG]
+icon-stage-4.png → Stage 4: Production Readiness                           [UPLOADED ✓]
+icon-stage-5.png → Stage 5: Manufacturing Support                          [UPLOADED ✓]
+icon-stage-6.png → Stage 6: Launch & Improvement                           [UPLOADED ✓]
+
+Note: if you replace icon-stage-3.svg with a PNG, also update the
+reference in product-development.html from icon-stage-3.svg to icon-stage-3.png
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SERVICE CARD IMAGES  (Homepage: "Know exactly what you need?")
+Format: JPG or PNG, landscape (displayed at 3:2 ratio, ~600×400px minimum)
+Use real photos of your work — CAD screenshots, drawings, FEA plots, etc.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+svc-concept.jpg   → Concept Design & CAD           [PLACEHOLDER — replace with real image]
+svc-cad.jpg       → Detailed 3D CAD                [PLACEHOLDER — replace with real image]
+svc-drawings.jpg  → 2D Manufacture Drawings        [PLACEHOLDER — replace with real image]
+svc-fea.jpg       → Structural Analysis (FEA)      [PLACEHOLDER — replace with real image]
+svc-prototype.jpg → Prototyping & Manufacture      [PLACEHOLDER — replace with real image]
+svc-testing.jpg   → Product Testing Support        [PLACEHOLDER — replace with real image]
+
+Good sources for service card images: screenshots from SolidWorks/Fusion 360,
+real photos of prototypes on your workbench, or stock photos from Unsplash/Pexels.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+BEFORE GOING LIVE — also update in the HTML files:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Domain: find "https://www.carchrie-engineering.com" in all .html files
+   and sitemap.xml — replace with your actual live domain.
+
+2. Contact form: the Fillout embed (ID: aaR9S31MCvus) is already wired in.
+   No changes needed unless your Fillout form ID changes.
+
+3. LinkedIn URL: already set to https://www.linkedin.com/company/carchrie-engineering/
+
+4. Cal.com: if you add booking later, update href in contact.html

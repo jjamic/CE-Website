@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hardware Product Development — Carchrie Engineering · Sydney</title>
+<meta name="description" content="End-to-end mechanical engineering for hardware products — concept through manufacture. CAD, FEA, DFM, prototyping, and production support. Enter at any stage.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.carchrie-engineering.com/product-development.html">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hardware Product Development — Carchrie Engineering · Sydney">
+<meta property="og:description" content="End-to-end mechanical engineering for hardware products — concept through manufacture. CAD, FEA, DFM, prototyping, and production support. Enter at any stage.">
+<meta property="og:url" content="https://www.carchrie-engineering.com/product-development.html">
+<meta property="og:image" content="https://www.carchrie-engineering.com/images/og-share-card.jpg">
+<meta property="og:site_name" content="Carchrie Engineering">
+<meta property="og:locale" content="en_AU">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hardware Product Development — Carchrie Engineering · Sydney">
+<meta name="twitter:description" content="End-to-end mechanical engineering for hardware products — concept through manufacture. CAD, FEA, DFM, prototyping, and production support. Enter at any stage.">
+<meta name="twitter:image" content="https://www.carchrie-engineering.com/images/og-share-card.jpg">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.page-hero{padding:80px 0;border-bottom:1px solid var(--ink-12);background:var(--white);}
+.page-hero-inner{max-width:var(--max-w);margin:0 auto;padding:0 40px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+.flex-box{background:var(--blue-faint);border:1.5px solid var(--blue-dim);border-radius:var(--r-lg);padding:24px;}
+.flex-box-title{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:14px;}
+.flex-item{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--blue-dim);}
+.flex-item:last-child{border-bottom:none;}
+.flex-dot{width:7px;height:7px;border-radius:50%;background:var(--blue);flex-shrink:0;margin-top:5px;}
+.flex-dot.open{background:transparent;border:1.5px solid var(--blue);}
+.flex-strong{font-size:13px;font-weight:500;color:var(--ink);display:block;margin-bottom:1px;}
+.flex-desc{font-size:12px;font-weight:300;color:var(--ink-60);line-height:1.5;}
+
+/* PATHWAY — horizontal scrolling timeline */
+.pathway-section{background:var(--off-white);padding:80px 0;border-top:1px solid var(--ink-12);}
+.pathway-hdr{max-width:var(--max-w);margin:0 auto;padding:0 40px 52px;}
+.pathway-scroll{overflow-x:auto;overflow-y:visible;padding:16px 0 40px;-webkit-overflow-scrolling:touch;display:flex;justify-content:center;}
+.pathway-scroll::-webkit-scrollbar{height:3px;}
+.pathway-scroll::-webkit-scrollbar-track{background:var(--ink-06);}
+.pathway-scroll::-webkit-scrollbar-thumb{background:var(--blue-dim);border-radius:3px;}
+.pathway-track{display:flex;flex-direction:row;align-items:flex-start;position:relative;padding:0 40px;width:max-content;}
+.pathway-track::before{content:'';position:absolute;top:52px;left:120px;right:120px;height:2px;background:var(--blue-dim);z-index:0;}
+.pathway-stage{display:flex;flex-direction:column;align-items:center;width:220px;flex-shrink:0;position:relative;z-index:1;opacity:.38;transform:translateY(10px);transition:opacity .5s,transform .5s;}
+.pathway-stage.active{opacity:1;transform:translateY(0);}
+.stage-illus{width:114px;height:114px;background:var(--white);border:2px solid var(--blue-dim);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:16px;transition:border-color .4s,box-shadow .4s;position:relative;flex-shrink:0;overflow:visible;}
+.pathway-stage.active .stage-illus{border-color:var(--blue);box-shadow:0 0 0 7px var(--blue-faint);}
+.stage-num{position:absolute;top:4px;right:4px;width:22px;height:22px;background:var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:var(--white);opacity:0;transition:opacity .4s;z-index:2;}
+.pathway-stage.active .stage-num{opacity:1;}
+.stage-svg{width:50px;height:50px;}
+.stage-content{text-align:center;padding:0 10px;width:100%;}
+.stage-title{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:5px;line-height:1.3;}
+.stage-desc{font-size:12px;font-weight:300;color:var(--ink-60);line-height:1.6;margin-bottom:8px;}
+.stage-delivs{display:flex;flex-wrap:wrap;gap:3px;justify-content:center;}
+.stage-deliv{font-size:10px;font-weight:500;color:var(--blue);background:var(--blue-faint);border:1px solid var(--blue-dim);border-radius:3px;padding:2px 6px;}
+
+
+.caps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:32px;}
+.cap-item{background:var(--white);border:1px solid var(--ink-12);border-radius:var(--r-lg);padding:18px;transition:border-color .18s;}
+.cap-item:hover{border-color:var(--blue);}
+.cap-num{font-size:11px;font-weight:800;letter-spacing:.1em;color:var(--blue);margin-bottom:6px;}
+.cap-title{font-size:13px;font-weight:500;color:var(--ink);margin-bottom:4px;}
+.cap-desc{font-size:12px;font-weight:300;color:var(--ink-60);line-height:1.55;}
+
+.case-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:32px;}
+.case-card{background:var(--white);border:1px solid var(--ink-12);border-radius:var(--r-lg);overflow:hidden;}
+.case-body{padding:18px 20px;}
+.case-tag-c{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:4px;}
+.case-award{display:inline-block;background:var(--blue);color:var(--white);font-size:10px;font-weight:800;padding:3px 8px;border-radius:3px;margin-bottom:6px;}
+.case-title-c{font-family:var(--display);font-weight:800;font-size:16px;color:var(--ink);line-height:1.15;margin-bottom:6px;}
+.case-desc-c{font-size:13px;font-weight:300;color:var(--ink-60);line-height:1.65;margin-bottom:10px;}
+
+@media(max-width:768px){
+  .page-hero-inner{grid-template-columns:1fr;gap:32px;padding:0 20px;}
+  .page-hero{padding:52px 0;}
+  .pathway-hdr{padding:0 20px 40px;}
+  .pathway-track{padding:0 20px;}
+  .pathway-stage{width:180px;}
+  .caps-grid{grid-template-columns:1fr 1fr;}
+  .case-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+<div id="nav-ph"></div>
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div>
+      <p class="t-tag reveal" style="margin-bottom:12px;">Hardware product development</p>
+      <h1 class="t-display t-h1 reveal" style="margin-bottom:16px;">From concept to<br><em style="font-style:italic;font-weight:300;color:var(--blue);">manufacturable<br>hardware</em></h1>
+      <p style="font-size:17px;font-weight:300;color:var(--ink-60);line-height:1.75;margin-bottom:14px;" class="reveal">Whether you have a napkin sketch or a near-finished design — we can help develop it, validate it, or get it across the line for manufacture.</p>
+      <p style="font-size:14px;font-weight:500;color:var(--blue);margin-bottom:28px;display:flex;align-items:center;gap:8px;" class="reveal"><span style="display:block;width:16px;height:1.5px;background:var(--blue);flex-shrink:0;"></span>From first idea to production — or anywhere in between.</p>
+      <div class="reveal"><a href="contact.html" class="btn btn-blue">Start a conversation</a></div>
+    </div>
+    <div class="flex-box reveal" style="display:flex;flex-direction:column;justify-content:center;">
+      <div class="flex-box-title">Enter at any stage</div>
+      <p style="font-size:15px;font-weight:300;color:var(--ink);line-height:1.75;margin:0;">From a napkin sketch to a near-finished design ready for production — the six-stage process below applies wherever you start. Nothing is wasted; we pick up from where you are.</p>
+    </div>
+  </div>
+</section>
+
+<!-- STAGE STRIP -->
+<div style="background:var(--blue);padding:12px 40px;overflow-x:auto;">
+  <div style="max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;gap:6px;flex-wrap:nowrap;white-space:nowrap;">
+    <span style="font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.38);white-space:nowrap;flex-shrink:0;">6 stages</span>
+    <div style="display:flex;align-items:center;flex:1;flex-wrap:wrap;">
+      <span style="font-size:11px;font-weight:500;color:rgba(255,255,255,.9);padding:2px 7px;">1 · Requirements &amp; Concept</span><span style="color:rgba(255,255,255,.3);">›</span>
+      <span style="font-size:11px;font-weight:500;color:rgba(255,255,255,.9);padding:2px 7px;">2 · Design &amp; Validation</span><span style="color:rgba(255,255,255,.3);">›</span>
+      <span style="font-size:11px;font-weight:500;color:rgba(255,255,255,.9);padding:2px 7px;">3 · Prototype &amp; Test</span><span style="color:rgba(255,255,255,.3);">›</span>
+      <span style="font-size:11px;font-weight:500;color:rgba(255,255,255,.9);padding:2px 7px;">4 · Production Readiness</span><span style="color:rgba(255,255,255,.3);">›</span>
+      <span style="font-size:11px;font-weight:500;color:rgba(255,255,255,.9);padding:2px 7px;">5 · Manufacturing Support</span><span style="color:rgba(255,255,255,.3);">›</span>
+      <span style="font-size:11px;font-weight:500;color:rgba(255,255,255,.9);padding:2px 7px;">6 · Launch &amp; Improvement</span>
+    </div>
+  </div>
+</div>
+
+<!-- PATHWAY -->
+<section class="pathway-section">
+  <div class="pathway-hdr">
+    <p class="t-tag reveal" style="margin-bottom:12px;">The process</p>
+    <h2 class="t-display t-h2 reveal" style="margin-bottom:8px;">Six stages from concept to launch</h2>
+    <p class="t-sub reveal">Iterative and Nothing committed before it's validated. Enter at any stage.</p>
+  </div>
+  <div class="pathway-scroll">
+    <div class="pathway-track">
+
+      <div class="pathway-stage">
+        <div class="stage-illus"><div class="stage-num">1</div><img src="images/trig-icon-2.png" alt="Stage 1" style="width:64px;height:64px;opacity:.88;"></div>
+        <div class="stage-content">
+          <div class="stage-title">Requirements &amp; Concept</div>
+          <div class="stage-desc">Requirements, feasibility, and preferred concept — with manufacture in mind from day one.</div>
+          <div class="stage-delivs"><span class="stage-deliv">Requirements spec</span><span class="stage-deliv">Feasibility</span><span class="stage-deliv">Concept design</span></div>
+        </div>
+      </div>
+
+      <div class="pathway-stage">
+        <div class="stage-illus"><div class="stage-num">2</div><img src="images/icon-stage-2.png" alt="Stage 2" style="width:64px;height:64px;opacity:.88;"></div>
+        <div class="stage-content">
+          <div class="stage-title">Design &amp; Validation</div>
+          <div class="stage-desc">Detailed CAD and engineering analysis. Tolerances, geometry, and materials decided with production in mind throughout.</div>
+          <div class="stage-delivs"><span class="stage-deliv">3D CAD</span><span class="stage-deliv">Structural analysis</span><span class="stage-deliv">Drawings</span><span class="stage-deliv">BOM</span></div>
+        </div>
+      </div>
+
+      <div class="pathway-stage">
+        <div class="stage-illus"><div class="stage-num">3</div><img src="images/icon-stage-3.png" alt="Stage 3" style="width:64px;height:64px;opacity:.88;"></div>
+        <div class="stage-content">
+          <div class="stage-title">Prototype &amp; Test</div>
+          <div class="stage-desc">Prototype builds to validate performance. Results feed directly back into design — stages 2 and 3 often iterate.</div>
+          <div class="stage-delivs"><span class="stage-deliv">Prototype build</span><span class="stage-deliv">Test plan</span><span class="stage-deliv">Test results</span><span class="stage-deliv">Revisions</span></div>
+        </div>
+      </div>
+
+      <div class="pathway-stage">
+        <div class="stage-illus"><div class="stage-num">4</div><img src="images/icon-stage-4.png" alt="Stage 4" style="width:64px;height:64px;opacity:.88;"></div>
+        <div class="stage-content">
+          <div class="stage-title">Production Readiness</div>
+          <div class="stage-desc">DFM review, tolerance optimisation, and supplier alignment before tooling is committed.</div>
+          <div class="stage-delivs"><span class="stage-deliv">DFM review</span><span class="stage-deliv">Updated CAD</span><span class="stage-deliv">Production spec</span><span class="stage-deliv">Cost review</span></div>
+        </div>
+      </div>
+
+      <div class="pathway-stage">
+        <div class="stage-illus"><div class="stage-num">5</div><img src="images/icon-stage-5.png" alt="Stage 5" style="width:64px;height:64px;opacity:.88;"></div>
+        <div class="stage-content">
+          <div class="stage-title">Manufacturing Support</div>
+          <div class="stage-desc">Supplier coordination, first article inspection, and sign-off before volume commitment.</div>
+          <div class="stage-delivs"><span class="stage-deliv">Supplier coordination</span><span class="stage-deliv">First article</span><span class="stage-deliv">Sign-off</span></div>
+        </div>
+      </div>
+
+      <div class="pathway-stage">
+        <div class="stage-illus"><div class="stage-num">6</div><img src="images/icon-stage-6.png" alt="Stage 6" style="width:64px;height:64px;opacity:.88;"></div>
+        <div class="stage-content">
+          <div class="stage-title">Launch &amp; Improvement</div>
+          <div class="stage-desc">Engineering handover, documentation, and ongoing support for future iterations.</div>
+          <div class="stage-delivs"><span class="stage-deliv">Engineering handover</span><span class="stage-deliv">Documentation</span><span class="stage-deliv">Ongoing support</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ITERATIVE NOTE -->
+<section class="section">
+  <div class="wrap pad-sm">
+    <div style="background:var(--blue-faint);border:1.5px solid var(--blue-dim);border-radius:var(--r-lg);padding:28px 32px;display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:flex-start;" class="reveal">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" style="flex-shrink:0;margin-top:2px;"><circle cx="14" cy="14" r="11.5" stroke="#558EB6" stroke-width="1.4"/><path d="M14 8v6l4 2.5" stroke="#558EB6" stroke-width="1.4" stroke-linecap="round"/><path d="M9 21c1.6 1.2 3.4 1.9 5 1.9a7 7 0 0 0 7-7" stroke="#558EB6" stroke-width="1.4" stroke-linecap="round"/><path d="M9 21l-2 2m2-2 2-2" stroke="#558EB6" stroke-width="1.4" stroke-linecap="round"/></svg>
+      <div>
+        <div style="font-size:15px;font-weight:500;color:var(--ink);margin-bottom:6px;">This is an iterative process, not a linear one</div>
+        <div style="font-size:14px;font-weight:300;color:var(--ink-60);line-height:1.8;">Each stage informs the others — concept feeds manufacture thinking, prototype results revise the CAD. Nothing is siloed. <strong style="font-weight:500;color:var(--ink);">Enter at any stage.</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAPABILITIES -->
+<section class="section">
+  <div class="wrap pad">
+    <p class="t-tag reveal" style="margin-bottom:12px;">Capabilities</p>
+    <h2 class="t-display t-h2 reveal" style="margin-bottom:8px;">What we bring</h2>
+    <p style="font-size:16px;font-weight:300;color:var(--ink-60);line-height:1.75;max-width:600px;margin-bottom:32px;" class="reveal">Structurally sound, manufacturable at cost, and usable in practice — DFM and unit economics considered from concept, not bolted on before tooling.</p>
+    <div class="caps-grid">
+      <div class="cap-item reveal"><div class="cap-num">01</div><div class="cap-title">Concept design &amp; CAD</div><div class="cap-desc">From brief or sketch to detailed 3D CAD — SolidWorks, Fusion 360 — with toleranced 2D manufacture drawings.</div></div>
+      <div class="cap-item reveal"><div class="cap-num">02</div><div class="cap-title">Structural analysis (FEA)</div><div class="cap-desc">Load case development, FEA, safety factor assessment, and failure mode identification.</div></div>
+      <div class="cap-item reveal"><div class="cap-num">03</div><div class="cap-title">Weight &amp; topology optimisation</div><div class="cap-desc">Topology studies to reduce mass without compromising structural performance — high value for EV and performance hardware.</div></div>
+      <div class="cap-item reveal"><div class="cap-num">04</div><div class="cap-title">Reverse engineering</div><div class="cap-desc">CAD from physical hardware where no digital files exist — legacy parts, OEM components, supplier samples.</div></div>
+      <div class="cap-item reveal"><div class="cap-num">05</div><div class="cap-title">Prototyping &amp; manufacture sourcing</div><div class="cap-desc">3D printing, CNC, and fabrication coordination. Supplier sourcing for low-volume and production.</div></div>
+      <div class="cap-item reveal"><div class="cap-num">06</div><div class="cap-title">DFM &amp; production readiness</div><div class="cap-desc">DFM review against real supplier constraints — tolerances, processes, cost, and assembly.</div></div>
+      <div class="cap-item reveal"><div class="cap-num">07</div><div class="cap-title">Regulatory &amp; standards support</div><div class="cap-desc">AS/NZS, CE, ADR, and ISO standards navigation. Load case development and testing lab coordination.</div></div>
+      <div class="cap-item reveal"><div class="cap-num">08</div><div class="cap-title">Failure analysis</div><div class="cap-desc">Root cause analysis for in-field or in-production failures — structural, weld defect, and wear-based.</div></div>
+      <div class="cap-item reveal"><div class="cap-num">09</div><div class="cap-title">Technical documentation</div><div class="cap-desc">Assembly instructions, service manuals, parts catalogues, and calculation reports for production and compliance.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CASES -->
+<section class="section">
+  <div class="wrap pad">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:28px;">
+      <div><p class="t-tag reveal" style="margin-bottom:8px;">Example projects</p><h2 class="t-display t-h2 reveal">Hardware delivered</h2></div>
+      <a href="projects.html" class="btn btn-outline reveal" style="flex-shrink:0;">All projects →</a>
+    </div>
+    <div class="case-grid">
+      <div class="case-card reveal">
+        <div class="carousel-wrap" style="aspect-ratio:4/3;border-radius:0;">
+          <div class="carousel-track">
+            <div class="carousel-slide"><img src="images/project-zoomo-1.jpg" alt="Zoomo One delivery vehicle"></div>
+            <div class="carousel-slide"><img src="images/project-zoomo-5.jpg" alt="Zoomo One front angle"></div>
+            <div class="carousel-slide"><img src="images/project-zoomo-2.jpg" alt="Frame FEA stress analysis"></div>
+            <div class="carousel-slide"><img src="images/project-zoomo-3.jpg" alt="Suspension kinematics"></div>
+            <div class="carousel-slide"><img src="images/project-zoomo-4.jpg" alt="Assembly drawing"></div>
+          </div>
+          <button class="carousel-btn carousel-btn-prev">‹</button><button class="carousel-btn carousel-btn-next">›</button>
+          <div class="carousel-dots" style="position:absolute;bottom:8px;left:0;right:0;"></div>
+        </div>
+        <div class="case-body">
+          <div class="case-tag-c">Light EV · Full development</div>
+          <div class="case-award">Good Design Award</div>
+          <div class="case-title-c">Zoomo One Electric Delivery Vehicle</div>
+          <div class="case-desc-c">Award-winning B2B electric delivery vehicle — concept through production.</div>
+          <div class="delivs"><span class="deliv">Full vehicle design</span><span class="deliv">Structural analysis</span><span class="deliv">Suspension</span><span class="deliv">Manufacture</span></div>
+        </div>
+      </div>
+      <div class="case-card reveal">
+        <div class="carousel-wrap" style="aspect-ratio:4/3;border-radius:0;">
+          <div class="carousel-track">
+            <div class="carousel-slide"><img src="images/project-bike-holder-4.jpg" alt="Bike holder installed on caravan"></div>
+            <div class="carousel-slide"><img src="images/project-bike-holder-1.jpg" alt="CAD concept design"></div>
+            <div class="carousel-slide"><img src="images/project-bike-holder-2.jpg" alt="Detailed design"></div>
+            <div class="carousel-slide"><img src="images/project-bike-holder-3.jpg" alt="Wheel cradle detail"></div>
+          </div>
+          <button class="carousel-btn carousel-btn-prev">‹</button><button class="carousel-btn carousel-btn-next">›</button>
+          <div class="carousel-dots" style="position:absolute;bottom:8px;left:0;right:0;"></div>
+        </div>
+        <div class="case-body">
+          <div class="case-tag-c">Consumer hardware · Concept to prototype</div>
+          <div class="case-title-c">Drawbar Bicycle Rack</div>
+          <div class="case-desc-c">Adjustable caravan drawbar bicycle rack — concept to manufacture pack and prototype.</div>
+          <div class="delivs"><span class="deliv">Concept design</span><span class="deliv">CAD</span><span class="deliv">Manufacture pack</span><span class="deliv">Prototype</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <h2 class="t-display t-h2 reveal" style="color:var(--white);margin-bottom:14px;">Have hardware<br>to develop?</h2>
+  <p class="reveal" style="font-size:17px;">Step in at any stage. Contact us to discuss your project.</p>
+  <div class="cta-band-btns reveal">
+    <a href="contact.html" class="btn btn-white">Contact us</a>
+    <a href="design-review.html" class="btn btn-ghost">Need a design review only?</a>
+  </div>
+</div>
+
+<div id="footer-ph"></div>
+<script src="js/main.js"></script>
+</body>
+</html>

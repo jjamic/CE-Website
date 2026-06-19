@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects & Case Studies — Carchrie Engineering · Sydney</title>
+<meta name="description" content="Hardware engineering projects including light electric vehicles, structural FEA, DFM reviews, and custom engineering tools. Good Design Award-winning work.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.carchrie-engineering.com/projects.html">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Projects & Case Studies — Carchrie Engineering · Sydney">
+<meta property="og:description" content="Hardware engineering projects including light electric vehicles, structural FEA, DFM reviews, and custom engineering tools. Good Design Award-winning work.">
+<meta property="og:url" content="https://www.carchrie-engineering.com/projects.html">
+<meta property="og:image" content="https://www.carchrie-engineering.com/images/og-share-card.jpg">
+<meta property="og:site_name" content="Carchrie Engineering">
+<meta property="og:locale" content="en_AU">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Projects & Case Studies — Carchrie Engineering · Sydney">
+<meta name="twitter:description" content="Hardware engineering projects including light electric vehicles, structural FEA, DFM reviews, and custom engineering tools. Good Design Award-winning work.">
+<meta name="twitter:image" content="https://www.carchrie-engineering.com/images/og-share-card.jpg">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.proj-hero{padding:64px 40px 48px;border-bottom:1px solid var(--ink-12);background:var(--white);}
+.proj-hero-inner{max-width:var(--max-w);margin:0 auto;}
+
+.filter-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px;}
+.filter-tab{font-size:12px;font-weight:500;padding:6px 16px;border-radius:20px;border:1.5px solid var(--ink-12);background:var(--white);color:var(--ink-60);cursor:pointer;transition:all .18s;}
+.filter-tab:hover{border-color:var(--blue);color:var(--blue);}
+.filter-tab.active{background:var(--blue);border-color:var(--blue);color:var(--white);}
+
+/* Same card style as homepage */
+.proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px;}
+.proj-card{background:var(--white);border:1px solid var(--ink-12);border-radius:var(--r-lg);overflow:hidden;text-decoration:none;display:flex;flex-direction:column;transition:border-color .18s,transform .18s;}
+.proj-card:hover{border-color:var(--blue);transform:translateY(-2px);}
+.proj-body{padding:15px 18px;flex:1;}
+.proj-type{font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:4px;}
+.proj-award{display:inline-block;background:var(--blue);color:var(--white);font-size:10px;font-weight:800;padding:2px 8px;border-radius:3px;margin-left:6px;vertical-align:middle;}
+.proj-client{font-size:10px;font-weight:300;color:var(--ink-30);margin-left:4px;}
+.proj-title{font-family:var(--display);font-weight:800;font-size:16px;color:var(--ink);margin-bottom:5px;line-height:1.2;}
+.proj-desc{font-size:13px;font-weight:300;color:var(--ink-60);line-height:1.65;margin-bottom:10px;}
+.proj-tags{padding:0 18px 14px;display:flex;gap:5px;flex-wrap:wrap;}
+.proj-outcome-strip{padding:10px 18px;background:var(--blue-faint);border-top:1px solid var(--blue-dim);display:flex;gap:8px;align-items:flex-start;min-height:56px;}
+.proj-outcome-label{font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--blue);white-space:nowrap;padding-top:2px;flex-shrink:0;}
+.proj-outcome-text{font-size:12px;font-weight:300;color:var(--blue-dark);line-height:1.55;}
+
+.more-note{margin-top:16px;padding:20px 24px;background:var(--off-white);border-radius:var(--r-lg);border:1px solid var(--ink-12);display:flex;justify-content:space-between;align-items:center;gap:20px;}
+.more-note-text{font-size:13px;font-weight:300;color:var(--ink-60);line-height:1.65;}
+
+@media(max-width:640px){
+  .proj-hero{padding:48px 20px 36px;}
+  .proj-grid{grid-template-columns:1fr;}
+  .more-note{flex-direction:column;}
+}
+</style>
+</head>
+<body>
+<div id="nav-ph"></div>
+
+<section class="proj-hero">
+  <div class="proj-hero-inner">
+    <p class="t-tag reveal" style="margin-bottom:10px;">Projects</p>
+    <h1 class="t-display t-h1 reveal" style="margin-bottom:10px;">Previous work</h1>
+    <p class="t-sub reveal" style="max-width:580px;margin-bottom:0;">A selection of projects across structural analysis, product development, and engineering tools. Much of our work is under NDA — further examples on request.</p>
+    <div class="filter-tabs reveal">
+      <button class="filter-tab active" data-filter="all">All</button>
+      <button class="filter-tab" data-filter="structural">Structural analysis</button>
+      <button class="filter-tab" data-filter="development">Product development</button>
+      <button class="filter-tab" data-filter="review">Design review</button>
+      <button class="filter-tab" data-filter="tools">Engineering tools</button>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap pad">
+    <div class="proj-grid" id="proj-grid">
+
+      <!-- ZOOMO ONE -->
+      <div class="proj-card reveal" data-tags="development">
+        <div class="carousel-wrap" style="aspect-ratio:4/3;border-radius:0;">
+          <div class="carousel-track">
+            <div class="carousel-slide"><img src="images/project-zoomo-1.jpg" alt="Zoomo One delivery vehicle"></div>
+            <div class="carousel-slide"><img src="images/project-zoomo-5.jpg" alt="Zoomo One front angle"></div>
+            <div class="carousel-slide"><img src="images/project-zoomo-2.jpg" alt="Frame FEA stress analysis"></div>
+            <div class="carousel-slide"><img src="images/project-zoomo-3.jpg" alt="Suspension kinematics"></div>
+            <div class="carousel-slide"><img src="images/project-zoomo-4.jpg" alt="Assembly drawing"></div>
+          </div>
+          <button class="carousel-btn carousel-btn-prev">‹</button>
+          <button class="carousel-btn carousel-btn-next">›</button>
+          <div class="carousel-dots" style="position:absolute;bottom:8px;left:0;right:0;"></div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-type">Light EV · Full development <span class="proj-award">Good Design Award</span></div>
+          <div class="proj-title">Zoomo One — Electric Delivery Vehicle</div>
+          <div class="proj-desc">Full mechanical design, custom FEA load case, suspension kinematics, and manufacture coordination for a B2B last-mile delivery vehicle.</div>
+        </div>
+        <div class="proj-tags"><span class="deliv">Vehicle design</span><span class="deliv">FEA</span><span class="deliv">Suspension</span><span class="deliv">Manufacture</span></div>
+        <div class="proj-outcome-strip"><span class="proj-outcome-label">Outcome</span><span class="proj-outcome-text">Vehicle went to production and won the Good Design Award.</span></div>
+      </div>
+
+      <!-- BIKE HOLDER -->
+      <div class="proj-card reveal" data-tags="development">
+        <div class="carousel-wrap" style="aspect-ratio:4/3;border-radius:0;">
+          <div class="carousel-track">
+            <div class="carousel-slide"><img src="images/project-bike-holder-4.jpg" alt="Bike holder installed on caravan"></div>
+            <div class="carousel-slide"><img src="images/project-bike-holder-1.jpg" alt="CAD concept design"></div>
+            <div class="carousel-slide"><img src="images/project-bike-holder-2.jpg" alt="Detailed design"></div>
+            <div class="carousel-slide"><img src="images/project-bike-holder-3.jpg" alt="Wheel cradle detail"></div>
+          </div>
+          <button class="carousel-btn carousel-btn-prev">‹</button>
+          <button class="carousel-btn carousel-btn-next">›</button>
+          <div class="carousel-dots" style="position:absolute;bottom:8px;left:0;right:0;"></div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-type">Consumer hardware · Concept to prototype</div>
+          <div class="proj-title">Drawbar Bicycle Rack</div>
+          <div class="proj-desc">Adjustable caravan drawbar bicycle rack for multiple wheel sizes. Full concept, detailed design, and manufacture pack. Prototyped and field-tested.</div>
+        </div>
+        <div class="proj-tags"><span class="deliv">Concept design</span><span class="deliv">CAD</span><span class="deliv">Manufacture pack</span><span class="deliv">Prototype</span></div>
+        <div class="proj-outcome-strip"><span class="proj-outcome-label">Outcome</span><span class="proj-outcome-text">Prototyped and field-tested. Full manufacture documentation delivered for Australian production.</span></div>
+      </div>
+
+      <!-- SILICONE COVER -->
+      <div class="proj-card reveal" data-tags="development">
+        <div class="carousel-wrap" style="aspect-ratio:4/3;border-radius:0;">
+          <div class="carousel-track">
+            <div class="carousel-slide"><img src="images/project-silicone-1.jpg" alt="Assembly drawing"></div>
+            <div class="carousel-slide"><img src="images/project-silicone-2.jpg" alt="CAD cross-section"></div>
+            <div class="carousel-slide"><img src="images/project-silicone-3.jpg" alt="3D prototype"></div>
+            <div class="carousel-slide"><img src="images/project-silicone-4.jpg" alt="Final product"></div>
+          </div>
+          <button class="carousel-btn carousel-btn-prev">‹</button>
+          <button class="carousel-btn carousel-btn-next">›</button>
+          <div class="carousel-dots" style="position:absolute;bottom:8px;left:0;right:0;"></div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-type">Consumer hardware · Concept to manufacture</div>
+          <div class="proj-title">Waterproof Silicone Protective Cover</div>
+          <div class="proj-desc">Waterproof silicone cover for Zoomo electric bike electronics. Prototype-tested before tooling, then successfully mass produced.</div>
+        </div>
+        <div class="proj-tags"><span class="deliv">CAD</span><span class="deliv">Prototype</span><span class="deliv">Water ingress testing</span><span class="deliv">DFM</span><span class="deliv">Mass production</span></div>
+        <div class="proj-outcome-strip"><span class="proj-outcome-label">Outcome</span><span class="proj-outcome-text">Successfully mass produced — prototype validation avoided an estimated $15k–$30k tooling revision.</span></div>
+      </div>
+
+      <!-- TRAILER BUMPER FEA -->
+      <div class="proj-card reveal" data-tags="structural review">
+        <div class="carousel-wrap" style="aspect-ratio:4/3;border-radius:0;">
+          <div class="carousel-track">
+            <div class="carousel-slide"><img src="images/project-bumper-1.jpg" alt="Bumper FEA stress plot"></div>
+            <div class="carousel-slide"><img src="images/project-bumper-2.jpg" alt="Bumper detailed stress"></div>
+            <div class="carousel-slide"><img src="images/project-bumper-3.jpg" alt="Bumper mesh model"></div>
+          </div>
+          <button class="carousel-btn carousel-btn-prev">‹</button>
+          <button class="carousel-btn carousel-btn-next">›</button>
+          <div class="carousel-dots" style="position:absolute;bottom:8px;left:0;right:0;"></div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-type">Automotive · Structural analysis</div>
+          <div class="proj-title">Trailer Bumper FEA — SAE Class 5</div>
+          <div class="proj-desc">Structural simulation of a vehicle bumper to SAE J684 Class 5 (16,000lb GVWR). Five load cases including failure analysis to determine maximum rated capacity.</div>
+        </div>
+        <div class="proj-tags"><span class="deliv">FEA</span><span class="deliv">SAE J684</span><span class="deliv">5 load cases</span><span class="deliv">Failure analysis</span></div>
+        <div class="proj-outcome-strip"><span class="proj-outcome-label">Outcome</span><span class="proj-outcome-text">Design predicted to pass all SAE Class 5 load conditions. Maximum capacity confirmed at 16,000lb.</span></div>
+      </div>
+
+      <!-- TABLE FEA -->
+      <div class="proj-card reveal" data-tags="structural review">
+        <div class="carousel-wrap" style="aspect-ratio:4/3;border-radius:0;">
+          <div class="carousel-track">
+            <div class="carousel-slide"><img src="images/project-table-2.jpg" alt="Table displacement FEA"></div>
+              <div class="carousel-slide"><img src="images/project-table-3.jpg" alt="Frame stress analysis"></div>
+              <div class="carousel-slide"><img src="images/project-table-4.jpg" alt="Bolt calculations"></div>
+              <div class="carousel-slide"><img src="images/project-table-1.jpg" alt="Load case summary"></div>
+          </div>
+          <button class="carousel-btn carousel-btn-prev">‹</button>
+          <button class="carousel-btn carousel-btn-next">›</button>
+          <div class="carousel-dots" style="position:absolute;bottom:8px;left:0;right:0;"></div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-type">Consumer furniture · Structural analysis</div>
+          <div class="proj-title">Dining Table Frame FEA</div>
+          <div class="proj-desc">FEA and bolt calculations to ISO 19682:2023 for a custom steel table frame before manufacture commitment. Load cases derived through standards review.</div>
+        </div>
+        <div class="proj-tags"><span class="deliv">FEA</span><span class="deliv">Bolt calculations</span><span class="deliv">ISO 19682:2023</span></div>
+        <div class="proj-outcome-strip"><span class="proj-outcome-label">Outcome</span><span class="proj-outcome-text">Connection redesign identified before production — avoiding an estimated $8k–$15k post-tooling revision.</span></div>
+      </div>
+
+      <!-- WELD ANALYSIS -->
+      <div class="proj-card reveal" data-tags="review">
+        <div class="carousel-wrap" style="aspect-ratio:4/3;border-radius:0;">
+          <div class="carousel-track">
+            <div class="carousel-slide"><img src="images/project-weld-1.jpg" alt="Weldment test results"></div>
+            <div class="carousel-slide"><img src="images/project-weld-2.jpg" alt="Weld defect closeup"></div>
+            <div class="carousel-slide"><img src="images/project-weld-3.jpg" alt="Macrostructure analysis"></div>
+          </div>
+          <button class="carousel-btn carousel-btn-prev">‹</button>
+          <button class="carousel-btn carousel-btn-next">›</button>
+          <div class="carousel-dots" style="position:absolute;bottom:8px;left:0;right:0;"></div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-type">Industrial · Weld defect analysis</div>
+          <div class="proj-title">Weldment Defect Analysis — AWS D1.1</div>
+          <div class="proj-desc">Analysis of weld defects from a 1,800-piece production batch against AWS D1.1. Lack of fusion, porosity and cracks assessed with qualification recommendations.</div>
+        </div>
+        <div class="proj-tags"><span class="deliv">AWS D1.1</span><span class="deliv">Defect assessment</span><span class="deliv">Batch review</span><span class="deliv">Technical memo</span></div>
+        <div class="proj-outcome-strip"><span class="proj-outcome-label">Outcome</span><span class="proj-outcome-text">Critical defects identified and documented. Testing programme defined to qualify the batch before rejection or release.</span></div>
+      </div>
+
+      <!-- CURTAIN RAIL CALCULATOR -->
+      <div class="proj-card reveal" data-tags="tools">
+        <div class="carousel-wrap" style="aspect-ratio:4/3;border-radius:0;">
+          <div class="carousel-track">
+            <div class="carousel-slide"><img src="images/project-curtain-1.jpg" alt="Bent track calculations"></div>
+            <div class="carousel-slide"><img src="images/project-curtain-2.jpg" alt="Cut length optimisation tool"></div>
+            <div class="carousel-slide"><img src="images/project-curtain-3.jpg" alt="Calculation outputs"></div>
+          </div>
+          <button class="carousel-btn carousel-btn-prev">‹</button>
+          <button class="carousel-btn carousel-btn-next">›</button>
+          <div class="carousel-dots" style="position:absolute;bottom:8px;left:0;right:0;"></div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-type">Manufacturing · Engineering tool</div>
+          <div class="proj-title">Custom Cut Curtain Rail Calculator</div>
+          <div class="proj-desc">Mathcad tool to optimise cut lengths for custom curtain rail manufacture. Inputs wall lengths and bend angles, outputs exact cut lengths to eliminate manual calculation errors.</div>
+        </div>
+        <div class="proj-tags"><span class="deliv">PTC Mathcad</span><span class="deliv">Cut length optimisation</span><span class="deliv">Custom bent profiles</span></div>
+        <div class="proj-outcome-strip"><span class="proj-outcome-label">Outcome</span><span class="proj-outcome-text">Deployed for ongoing production use — manual calculations replaced with a validated repeatable tool.</span></div>
+      </div>
+
+
+      <!-- SPEAKER ENCLOSURE -->
+      <div class="proj-card reveal" data-tags="development">
+        <div class="carousel-wrap" style="aspect-ratio:4/3;border-radius:0;">
+          <div class="carousel-track">
+            <div class="carousel-slide"><img src="images/project-speaker-1.jpg" alt="Speaker enclosure CAD"></div>
+            <div class="carousel-slide"><img src="images/project-speaker-2.jpg" alt="Assembled speaker"></div>
+            <div class="carousel-slide"><img src="images/project-speaker-3.jpg" alt="Laser cut panels"></div>
+            <div class="carousel-slide"><img src="images/project-speaker-4.jpg" alt="Electronics assembly"></div>
+          </div>
+          <button class="carousel-btn carousel-btn-prev">‹</button>
+          <button class="carousel-btn carousel-btn-next">›</button>
+          <div class="carousel-dots" style="position:absolute;bottom:8px;left:0;right:0;"></div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-type">Educational · Product design &amp; documentation</div>
+          <div class="proj-title">Educational Speaker Enclosure Kit</div>
+          <div class="proj-desc">Laser-cut panel enclosure designed around a Bluetooth speaker electronics kit for educational use. 2D panels optimised for easy cutting and assembly, with detailed step-by-step instructions and an assembly video walkthrough for students building a functioning speaker from scratch.</div>
+        </div>
+        <div class="proj-tags"><span class="deliv">2D CAD</span><span class="deliv">Laser cut panels</span><span class="deliv">DFM</span><span class="deliv">Assembly instructions</span><span class="deliv">Assembly video</span></div>
+        <div class="proj-outcome-strip"><span class="proj-outcome-label">Outcome</span><span class="proj-outcome-text">Kit designed for easy manufacture and self-assembly, with full documentation enabling students to build a functioning Bluetooth speaker.</span></div>
+      </div>
+
+    </div>
+
+    <div class="more-note reveal">
+      <p class="more-note-text">More examples available on request — bicycle frame analysis, LEV components, accessible mobility hardware, and industrial jigs. Many projects are under NDA.</p>
+      <a href="contact.html" class="btn btn-blue" style="flex-shrink:0;">Contact us →</a>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <h2 class="t-display t-h2 reveal" style="color:var(--white);margin-bottom:14px;">Ready to get started?</h2>
+  <p class="reveal" style="font-size:17px;">Contact us to discuss your project.</p>
+  <div class="cta-band-btns reveal">
+    <a href="contact.html" class="btn btn-white">Contact us</a>
+    <a href="design-review.html" class="btn btn-ghost">View review packages</a>
+  </div>
+</div>
+
+<div id="footer-ph"></div>
+<script src="js/main.js"></script>
+<script>
+document.querySelectorAll('.filter-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    const filter = tab.dataset.filter;
+    document.querySelectorAll('.proj-card').forEach(card => {
+      const tags = (card.dataset.tags || '').split(' ');
+      const show = filter === 'all' || tags.includes(filter);
+      card.style.display = show ? '' : 'none';
+    });
+  });
+});
+</script>
+</body>
+</html>
